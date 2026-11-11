@@ -247,5 +247,15 @@
             alert("Exporting Student Attendance & Progress Ledger (CSV) for November 2026...");
         }
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.btn, button').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.parent.location.href = '../404.html';
+            });
+        });
+    });
+</script>
 </body>
 </html>

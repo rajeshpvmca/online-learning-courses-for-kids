@@ -192,5 +192,15 @@
             alert("✅ Grade (" + total + "/40) submitted successfully for Toby Watson!\n\nAwarded Badge: " + badge + "\nReward: " + gems + "\n\nNotification sent to Robert Watson (Parent)!");
         }
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.btn, button').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.parent.location.href = '../404.html';
+            });
+        });
+    });
+</script>
 </body>
 </html>

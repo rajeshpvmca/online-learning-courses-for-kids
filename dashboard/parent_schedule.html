@@ -165,5 +165,15 @@
             alert("Syncing Toby's schedule with your Google Calendar / Apple iCal (.ics downloaded)...");
         }
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.btn, button').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.parent.location.href = '../404.html';
+            });
+        });
+    });
+</script>
 </body>
 </html>
