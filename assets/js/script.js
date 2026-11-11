@@ -39,11 +39,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // -------------------------------------------------------------------
+  // 1.1 DYNAMIC HEADER HEIGHT SYNCHRONIZATION (ZERO-GAP DEFENSE)
+  // -------------------------------------------------------------------
+  function syncHeaderHeight() {
+    const siteHeader = document.getElementById('siteHeader');
+    if (!siteHeader) return;
+    const rect = siteHeader.getBoundingClientRect();
+    const height = Math.round(rect.height);
+    if (height > 0) {
+      document.documentElement.style.setProperty('--site-header-height', `${height}px`);
+      if (!document.body.classList.contains('error-page-body') && 
+          !document.body.classList.contains('auth-page') && 
+          !document.body.classList.contains('dash-shell')) {
+        document.body.style.paddingTop = `${height}px`;
+      }
+    }
+  }
+
   // Pre-bind if elements already exist in DOM
   initNavigation();
   initScrollToTop();
   highlightActiveNav();
   updateCopyrightYear();
+  syncHeaderHeight();
 
   // Load header.html and footer.html components and initialize handlers
   Promise.all([
@@ -54,7 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
     initScrollToTop();
     highlightActiveNav();
     updateCopyrightYear();
+    syncHeaderHeight();
   });
+
+  window.addEventListener('resize', syncHeaderHeight);
+  window.addEventListener('load', syncHeaderHeight);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncHeaderHeight);
+  }
 
   // -------------------------------------------------------------------
   // 2. FIXED HEADER ON SCROLL
@@ -81,12 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openMenu() {
       overlay.classList.add('active');
+      toggleBtn.classList.add('active');
       document.body.style.overflow = 'hidden';
       toggleBtn.setAttribute('aria-expanded', 'true');
     }
 
     function closeMenu() {
       overlay.classList.remove('active');
+      toggleBtn.classList.remove('active');
       document.body.style.overflow = '';
       toggleBtn.setAttribute('aria-expanded', 'false');
     }
