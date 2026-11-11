@@ -1,0 +1,197 @@
+<!-- ===================================================================
+     STACKLY KIDS ACADEMY - COMMON HEADER COMPONENT
+     Theme: Online Learning Courses For Kids
+     Features: Fixed header on scroll, Fullscreen mobile navigation overlay,
+               Kid-friendly vibrant theme & Free Trial CTA
+     =================================================================== -->
+<header class="site-header fixed-top" id="siteHeader">
+  <!-- Top Kid Alert Announcement Bar -->
+  <div class="header-topbar py-1 d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="topbar-left d-flex align-items-center gap-3">
+        <span class="badge bg-sun-yellow text-dark fw-bold rounded-pill px-2 py-1">
+          <i class="fa-solid fa-sparkles me-1"></i> SPECIAL OFFER
+        </span>
+        <span class="topbar-announcement text-white small">
+          Enroll in Spring STEM Camp &bull; Get <strong>2 Free Live 1-on-1 Trial Classes</strong>!
+        </span>
+      </div>
+      <div class="topbar-right d-flex align-items-center gap-3 text-white small">
+        <a href="tel:+919876543210" class="topbar-link text-white text-decoration-none">
+          <i class="fa-solid fa-phone-volume text-sun-yellow me-1"></i> +91 9876543210
+        </a>
+        <span class="topbar-divider">|</span>
+        <span class="topbar-location">
+          <i class="fa-solid fa-location-dot text-coral me-1"></i> Chinna Thirupathi, Salem, Tamil Nadu
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar py-2 py-lg-3" aria-label="Main Kids Learning Navigation">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Brand Logo (Official Stackly Logo with Theme Colors) -->
+      <a class="navbar-brand header-brand d-inline-flex align-items-center py-0" href="index.html" aria-label="Stackly Kids Academy">
+        <div class="logo-theme-wrapper d-inline-flex align-items-center">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Kids Academy" class="header-logo img-fluid" height="34" onerror="this.onerror=null; this.src='assets/images/logoStackly.webp';">
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Centered) -->
+      <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center" id="desktopNavbarNav">
+        <ul class="navbar-nav align-items-center gap-1 gap-xl-2 mb-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" id="nav-home">
+              <i class="fa-solid fa-house-chimney nav-icon me-1"></i>Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" id="nav-about">
+              <i class="fa-solid fa-heart nav-icon me-1"></i>About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="courses.html" id="nav-courses">
+              <i class="fa-solid fa-shapes nav-icon me-1"></i>Courses
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="teachers.html" id="nav-teachers">
+              <i class="fa-solid fa-chalkboard-user nav-icon me-1"></i>Mentors
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="activities.html" id="nav-activities">
+              <i class="fa-solid fa-gamepad nav-icon me-1"></i>Fun Zone
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html" id="nav-pricing">
+              <i class="fa-solid fa-tag nav-icon me-1"></i>Pricing
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" id="nav-contact">
+              <i class="fa-solid fa-paper-plane nav-icon me-1"></i>Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Desktop Right Actions (Login & Free Trial CTA) -->
+      <div class="header-desktop-actions d-none d-lg-flex align-items-center gap-2">
+        <a href="login.html" class="btn-header-login">
+          <i class="fa-solid fa-user-astronaut me-1"></i> Login
+        </a>
+        <a href="register.html" class="btn-header-trial">
+          <i class="fa-solid fa-wand-magic-sparkles me-1"></i> Free Trial
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="navbar-toggler d-lg-none mobile-nav-toggler border-0 p-2" type="button" id="mobileMenuToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="fullscreenMobileMenu">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Fullscreen Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay d-lg-none" id="fullscreenMobileMenu" aria-hidden="true">
+    <div class="mobile-nav-container">
+      
+      <!-- Mobile Header Top Row -->
+      <div class="mobile-nav-header d-flex justify-content-between align-items-center">
+        <a href="index.html" class="mobile-menu-logo d-inline-flex align-items-center text-decoration-none" aria-label="Stackly Kids Academy">
+          <div class="logo-theme-wrapper-mobile d-inline-flex align-items-center">
+            <img src="assets/images/logoStackly.webp" alt="Stackly Kids Academy" class="header-logo-mobile img-fluid" height="30">
+          </div>
+          <span class="brand-subtag ms-2">KIDS ACADEMY</span>
+        </a>
+        <button class="mobile-nav-close border-0 bg-transparent" id="mobileMenuCloseBtn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Links -->
+      <div class="mobile-nav-body py-4">
+        <ul class="mobile-menu-list list-unstyled mb-0">
+          <li class="mobile-nav-item">
+            <a href="index.html" class="mobile-nav-link" id="mob-nav-home">
+              <span class="menu-icon-wrap bg-soft-indigo"><i class="fa-solid fa-house-chimney text-indigo"></i></span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="about.html" class="mobile-nav-link" id="mob-nav-about">
+              <span class="menu-icon-wrap bg-soft-coral"><i class="fa-solid fa-heart text-coral"></i></span>
+              <span>About Us</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="courses.html" class="mobile-nav-link" id="mob-nav-courses">
+              <span class="menu-icon-wrap bg-soft-yellow"><i class="fa-solid fa-shapes text-amber"></i></span>
+              <span>Courses (Ages 4-15)</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="teachers.html" class="mobile-nav-link" id="mob-nav-teachers">
+              <span class="menu-icon-wrap bg-soft-mint"><i class="fa-solid fa-chalkboard-user text-mint"></i></span>
+              <span>Certified Mentors</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="activities.html" class="mobile-nav-link" id="mob-nav-activities">
+              <span class="menu-icon-wrap bg-soft-cyan"><i class="fa-solid fa-gamepad text-cyan"></i></span>
+              <span>Fun Zone &amp; Quizzes</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="pricing.html" class="mobile-nav-link" id="mob-nav-pricing">
+              <span class="menu-icon-wrap bg-soft-purple"><i class="fa-solid fa-tag text-purple"></i></span>
+              <span>Pricing &amp; Plans</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link" id="mob-nav-contact">
+              <span class="menu-icon-wrap bg-soft-pink"><i class="fa-solid fa-paper-plane text-pink"></i></span>
+              <span>Contact Us</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="dashboard.html" class="mobile-nav-link" id="mob-nav-dash">
+              <span class="menu-icon-wrap bg-soft-emerald"><i class="fa-solid fa-trophy text-emerald"></i></span>
+              <span>Kid Portal / Dashboard</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile Footer Quick Actions & Contact -->
+      <div class="mobile-nav-footer pt-3">
+        <div class="d-grid gap-2 mb-3">
+          <a href="register.html" class="btn btn-coral-glow py-2 fw-bold rounded-pill text-white text-center">
+            <i class="fa-solid fa-wand-magic-sparkles me-2"></i> Book Free Demo Class
+          </a>
+          <a href="login.html" class="btn btn-outline-white py-2 fw-bold rounded-pill text-white text-center">
+            <i class="fa-solid fa-user-astronaut me-2"></i> Student / Parent Login
+          </a>
+        </div>
+        
+        <div class="mobile-contact-pill p-2 rounded-4 text-center">
+          <a href="tel:+919876543210" class="text-white text-decoration-none small d-block">
+            <i class="fa-solid fa-phone-volume text-sun-yellow me-2"></i>+91 9876543210
+          </a>
+          <span class="text-white-50" style="font-size: 0.75rem;">
+            <i class="fa-solid fa-location-dot text-coral me-1"></i> Chinna Thirupathi, Salem, Tamil Nadu
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>

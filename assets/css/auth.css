@@ -1,0 +1,519 @@
+/* ===================================================================
+   STACKLY KIDS ACADEMY - AUTHENTICATION STYLES (LOGIN & REGISTER)
+   Theme: Online Learning Courses For Kids
+   Primary: Electric Indigo (#4F46E5) & Sunny Amber (#FBBF24)
+   Full Device Responsive & 320px Micro Viewport Defense
+   =================================================================== */
+
+:root {
+  --auth-bg-deep: #0b0f2a;
+  --auth-bg-card: #11183e;
+  --auth-bg-input: #090d24;
+  --auth-primary: #4F46E5;
+  --auth-primary-hover: #4338CA;
+  --auth-primary-light: #818CF8;
+  --auth-secondary: #FBBF24;
+  --auth-secondary-hover: #F59E0B;
+  --auth-coral: #FF4D6D;
+  --auth-mint: #10B981;
+  --auth-cyan: #06B6D4;
+  --auth-border: rgba(79, 70, 229, 0.32);
+  --auth-border-gold: rgba(251, 191, 36, 0.35);
+  --auth-glow: rgba(79, 70, 229, 0.25);
+  --auth-glow-gold: rgba(251, 191, 36, 0.28);
+  --auth-text-light: #F8FAFC;
+  --auth-text-muted: #94A3B8;
+  --auth-font-heading: 'Fredoka', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --auth-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body.auth-page {
+  background-color: var(--auth-bg-deep);
+  color: var(--auth-text-light);
+  font-family: var(--auth-font-body);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------------------------------
+   1. DESKTOP LEFT BANNER
+   ------------------------------------------------------------------- */
+.auth-banner {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.auth-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(11, 15, 42, 0.94) 0%, rgba(17, 24, 62, 0.90) 100%);
+  z-index: 1;
+}
+
+.auth-banner-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.5rem 3rem;
+}
+
+/* Theme Filter for Stackly Logo */
+.auth-banner-logo img,
+.auth-mobile-logo img {
+  height: 38px;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(31%) sepia(85%) saturate(2200%) hue-rotate(235deg) brightness(96%) contrast(96%) drop-shadow(0 2px 8px rgba(251, 191, 36, 0.6));
+  transition: transform 0.3s ease;
+}
+
+.auth-banner-logo:hover img,
+.auth-mobile-logo:hover img {
+  transform: scale(1.05);
+}
+
+.auth-banner-headline {
+  font-family: var(--auth-font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.auth-banner-desc {
+  font-size: 0.95rem;
+  color: #CBD5E1;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.auth-trust-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.auth-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.86rem;
+  color: #E2E8F0;
+  background: rgba(17, 24, 62, 0.75);
+  border: 1px solid var(--auth-border);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  width: fit-content;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.auth-trust-badge i {
+  color: var(--auth-secondary);
+  font-size: 1rem;
+}
+
+/* -------------------------------------------------------------------
+   2. RIGHT FORM SECTION
+   ------------------------------------------------------------------- */
+.auth-form-side {
+  background: radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.12) 0%, transparent 50%),
+              radial-gradient(circle at 20% 80%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+              linear-gradient(180deg, #0e1438 0%, #0b0f2a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  min-height: 100vh;
+}
+
+.auth-form-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(17, 24, 62, 0.94);
+  border: 1px solid var(--auth-border);
+  border-top: 3px solid var(--auth-secondary);
+  border-radius: 16px;
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(79, 70, 229, 0.15);
+}
+
+/* Back Link */
+.auth-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--auth-secondary);
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.auth-back-link:hover {
+  color: #FDE68A;
+  transform: translateX(-4px);
+}
+
+/* Form Header */
+.auth-form-header {
+  margin-bottom: 1.8rem;
+  text-align: left;
+}
+
+.auth-form-title {
+  font-family: var(--auth-font-heading);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.01em;
+}
+
+.auth-form-subtitle {
+  font-size: 0.88rem;
+  color: var(--auth-text-muted);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Role Selector (Student, Parent, Teacher) */
+.role-section-label,
+.auth-field-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--auth-secondary);
+  margin-bottom: 0.45rem;
+}
+
+.role-card-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.role-card-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.85rem 0.5rem;
+  background: var(--auth-bg-input);
+  border: 1px solid var(--auth-border);
+  border-radius: 10px;
+  color: #94A3B8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.role-card-label i {
+  font-size: 1.25rem;
+  color: var(--auth-primary-light);
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.role-card-label:hover {
+  border-color: var(--auth-secondary);
+  color: #FFFFFF;
+  background: rgba(79, 70, 229, 0.15);
+}
+
+.role-card-label:hover i {
+  transform: scale(1.15);
+  color: var(--auth-secondary);
+}
+
+.role-card-input:checked + .role-card-label {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.32) 0%, rgba(251, 191, 36, 0.18) 100%);
+  border-color: var(--auth-secondary);
+  color: #FFFFFF;
+  box-shadow: 0 0 16px var(--auth-glow-gold);
+}
+
+.role-card-input:checked + .role-card-label i {
+  color: var(--auth-secondary);
+}
+
+/* Custom Form Input Fields */
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--auth-secondary);
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.custom-input {
+  background-color: var(--auth-bg-input) !important;
+  border: 1px solid var(--auth-border) !important;
+  color: #FFFFFF !important;
+  border-radius: 8px !important;
+  padding: 0.68rem 1rem 0.68rem 2.6rem !important;
+  font-size: 0.9rem !important;
+  transition: all 0.25s ease !important;
+}
+
+.custom-input:focus {
+  border-color: var(--auth-primary) !important;
+  box-shadow: 0 0 0 3px var(--auth-glow) !important;
+  outline: none !important;
+  background-color: #0d1334 !important;
+}
+
+.custom-input::placeholder {
+  color: #64748B !important;
+  font-size: 0.85rem !important;
+}
+
+/* Password Toggle Button */
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #94A3B8;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 0.95rem;
+  z-index: 2;
+  transition: color 0.2s ease;
+}
+
+.toggle-password:hover {
+  color: var(--auth-secondary);
+}
+
+/* Password Strength Meter */
+.password-strength-meter {
+  display: flex;
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+
+.strength-bar {
+  height: 3px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.3s ease;
+}
+
+.strength-bar.active-weak {
+  background-color: #EF4444 !important;
+}
+
+.strength-bar.active-fair {
+  background-color: #F59E0B !important;
+}
+
+.strength-bar.active-good {
+  background-color: var(--auth-primary) !important;
+}
+
+.strength-bar.active-strong {
+  background-color: #10B981 !important;
+}
+
+/* Checkbox & Links */
+.form-check-input {
+  background-color: var(--auth-bg-input);
+  border: 1px solid var(--auth-border);
+  border-radius: 4px;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--auth-primary);
+  border-color: var(--auth-primary);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 2px var(--auth-glow);
+  border-color: var(--auth-primary);
+}
+
+.form-check-label {
+  font-size: 0.84rem;
+  color: #CBD5E1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-gold-link,
+.auth-theme-link {
+  color: var(--auth-secondary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.auth-gold-link:hover,
+.auth-theme-link:hover {
+  color: #FDE68A;
+  text-decoration: underline;
+}
+
+/* Submit Button: Electric Indigo Gradient with Sunny Amber Accents */
+.btn-auth-gold,
+.btn-auth-theme {
+  width: 100%;
+  background: linear-gradient(135deg, #4F46E5 0%, #6366F1 50%, #4F46E5 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.4);
+  margin-top: 0.5rem;
+}
+
+.btn-auth-gold:hover,
+.btn-auth-theme:hover {
+  background: linear-gradient(135deg, #4338CA 0%, #4F46E5 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.6);
+}
+
+.btn-auth-gold:active,
+.btn-auth-theme:active {
+  transform: translateY(0);
+}
+
+.auth-switch-text {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--auth-text-muted);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Invalid Feedback */
+.invalid-feedback {
+  color: #F87171 !important;
+  font-size: 0.78rem !important;
+}
+
+/* -------------------------------------------------------------------
+   3. RESPONSIVE DEFENSE (MOBILE & 320PX)
+   ------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .auth-form-side {
+    padding: 2.5rem 1.25rem;
+    min-height: 100vh;
+  }
+  .auth-form-card {
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
+  .auth-mobile-logo {
+    display: block !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form-side {
+    padding: 1.5rem 0.85rem;
+  }
+  .auth-form-card {
+    padding: 1.75rem 1.15rem;
+  }
+  .auth-form-title {
+    font-size: 1.55rem;
+  }
+  .role-card-label {
+    padding: 0.65rem 0.3rem;
+    font-size: 0.75rem;
+  }
+  .role-card-label i {
+    font-size: 1.1rem;
+  }
+}
+
+/* 320px Micro Viewport Defense */
+@media (max-width: 340px) {
+  .auth-form-side {
+    padding: 1rem 0.5rem !important;
+  }
+  .auth-form-card {
+    padding: 1.25rem 0.75rem !important;
+    border-radius: 8px !important;
+  }
+  .auth-mobile-logo img {
+    height: 30px !important;
+  }
+  .auth-back-link {
+    font-size: 0.74rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .auth-form-title {
+    font-size: 1.35rem !important;
+  }
+  .auth-form-subtitle {
+    font-size: 0.78rem !important;
+  }
+  .role-section-label,
+  .auth-field-label {
+    font-size: 0.7rem !important;
+  }
+  .role-card-label {
+    padding: 0.55rem 0.2rem !important;
+    font-size: 0.68rem !important;
+    gap: 0.25rem !important;
+  }
+  .role-card-label i {
+    font-size: 0.95rem !important;
+  }
+  .custom-input {
+    font-size: 0.82rem !important;
+    padding: 0.58rem 0.75rem 0.58rem 2.2rem !important;
+  }
+  .input-icon {
+    left: 10px !important;
+    font-size: 0.82rem !important;
+  }
+  .form-check-label {
+    font-size: 0.74rem !important;
+  }
+  .btn-auth-gold,
+  .btn-auth-theme {
+    padding: 0.7rem 1rem !important;
+    font-size: 0.78rem !important;
+  }
+  .auth-switch-text {
+    font-size: 0.76rem !important;
+  }
+}

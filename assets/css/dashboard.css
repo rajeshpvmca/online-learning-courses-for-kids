@@ -1,0 +1,691 @@
+/* ===================================================================
+   STACKLY KIDS ACADEMY - MASTER DASHBOARD STYLES (dashboard.css)
+   Theme: Online Learning Courses For Kids
+   Primary: Electric Indigo (#4F46E5) & Sunny Amber (#FBBF24)
+   Accent: Coral Glow (#FF4D6D), Playful Cyan (#06B6D4), Mint (#10B981)
+   Full Device Responsive & 320px Micro Viewport Defense
+   =================================================================== */
+
+:root {
+  --dash-bg-deep: #0b0f2a;
+  --dash-bg-shell: #0e1438;
+  --dash-bg-sidebar: #090d24;
+  --dash-bg-card: #11183e;
+  --dash-bg-input: #070a1c;
+  --dash-primary: #4F46E5;
+  --dash-primary-hover: #4338CA;
+  --dash-primary-light: #818CF8;
+  --dash-secondary: #FBBF24;
+  --dash-secondary-hover: #F59E0B;
+  --dash-gold: #FBBF24;
+  --dash-gold-light: #FDE68A;
+  --dash-coral: #FF4D6D;
+  --dash-mint: #10B981;
+  --dash-cyan: #06B6D4;
+  --dash-purple: #8B5CF6;
+  --dash-border: rgba(79, 70, 229, 0.28);
+  --dash-border-gold: rgba(251, 191, 36, 0.35);
+  --dash-glow: rgba(79, 70, 229, 0.25);
+  --dash-glow-gold: rgba(251, 191, 36, 0.28);
+  --dash-text-white: #FFFFFF;
+  --dash-text-light: #E2E8F0;
+  --dash-text-muted: #94A3B8;
+  --dash-font-heading: 'Fredoka', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --dash-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base Shell for Parent App (dashboard.html) */
+body.dash-shell {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dash-bg-deep);
+  color: var(--dash-text-light);
+  font-family: var(--dash-font-body);
+  overflow: hidden;
+}
+
+/* Base HTML & Custom Scrollbars for all 15 sub-pages */
+html {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(251, 191, 36, 0.45) rgba(11, 15, 42, 0.95);
+}
+
+/* Custom Scrollbar for Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(11, 15, 42, 0.95);
+  border-left: 1px solid rgba(79, 70, 229, 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.35);
+  border-radius: 4px;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dash-secondary);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+/* -------------------------------------------------------------------
+   1. SIDEBAR NAVIGATION
+   ------------------------------------------------------------------- */
+.dash-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0e1438 0%, #090d24 100%);
+  border-right: 1px solid var(--dash-border);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.sidebar-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--dash-border);
+  background: rgba(17, 24, 62, 0.85);
+}
+
+.sidebar-header-logo img {
+  height: 34px;
+  width: auto;
+  filter: brightness(0) saturate(100%) invert(31%) sepia(85%) saturate(2200%) hue-rotate(235deg) brightness(96%) contrast(96%) drop-shadow(0 2px 8px rgba(251, 191, 36, 0.6));
+  transition: transform 0.25s ease;
+}
+
+.sidebar-header-logo:hover img {
+  transform: scale(1.05);
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1.25rem 0.85rem;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.2);
+  border-radius: 4px;
+}
+
+.nav-section-title {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dash-secondary);
+  padding: 0 0.75rem;
+  margin-bottom: 0.6rem;
+  margin-top: 0.25rem;
+  opacity: 0.95;
+}
+
+.nav-item-dash {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.9rem;
+  color: #CBD5E1;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 0.35rem;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-item-dash span.material-symbols-outlined,
+.nav-item-dash i {
+  font-size: 1.2rem;
+  color: var(--dash-primary-light);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-item-dash:hover {
+  background: rgba(79, 70, 229, 0.16);
+  color: #FFFFFF;
+  border-left-color: var(--dash-secondary);
+}
+
+.nav-item-dash:hover span.material-symbols-outlined,
+.nav-item-dash:hover i {
+  color: var(--dash-secondary);
+  transform: translateX(2px);
+}
+
+.nav-item-dash.active {
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.35) 0%, rgba(251, 191, 36, 0.15) 100%);
+  color: #FFFFFF;
+  border-left-color: var(--dash-secondary);
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.nav-item-dash.active span.material-symbols-outlined,
+.nav-item-dash.active i {
+  color: var(--dash-secondary);
+}
+
+/* -------------------------------------------------------------------
+   2. MAIN DASHBOARD SHELL & TOPBAR
+   ------------------------------------------------------------------- */
+.dash-main {
+  margin-left: 260px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dash-bg-deep);
+  position: relative;
+}
+
+.dash-header {
+  height: 72px;
+  background: rgba(17, 24, 62, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--dash-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 100;
+}
+
+.dash-portal-title {
+  font-family: var(--dash-font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.role-badge-gold,
+.role-badge-theme {
+  display: inline-block;
+  background: rgba(251, 191, 36, 0.18);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  color: var(--dash-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4F46E5 0%, #FBBF24 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.btn-dash-signout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(17, 24, 62, 0.85);
+  border: 1px solid var(--dash-border);
+  color: var(--dash-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-dash-signout:hover {
+  background: rgba(79, 70, 229, 0.25);
+  border-color: var(--dash-secondary);
+  color: #FFFFFF;
+}
+
+/* Dashboard Iframe */
+#dashFrame {
+  width: 100%;
+  height: calc(100vh - 72px);
+  border: none;
+  background-color: var(--dash-bg-deep);
+  display: block;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Mobile Sidebar Drawer & Overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 15, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1040;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+/* -------------------------------------------------------------------
+   3. SUB-PAGE INTERNAL COMPONENTS (Used across all 15 sub-pages)
+   ------------------------------------------------------------------- */
+body.dash-page-body {
+  background-color: var(--dash-bg-deep);
+  color: var(--dash-text-light);
+  font-family: var(--dash-font-body);
+  margin: 0;
+  padding: 1.5rem 1.5rem 4rem 1.5rem;
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dash-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--dash-border);
+}
+
+.dash-page-title {
+  font-family: var(--dash-font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 0.25rem 0;
+}
+
+.dash-page-subtitle {
+  font-size: 0.88rem;
+  color: var(--dash-text-muted);
+  margin: 0;
+}
+
+/* Gamified Banner / Card */
+.dash-welcome-banner {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.35) 0%, rgba(251, 191, 36, 0.2) 100%);
+  border: 1px solid var(--dash-border);
+  border-left: 4px solid var(--dash-secondary);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Stat Cards */
+.dash-stat-card {
+  background: linear-gradient(180deg, rgba(17, 24, 62, 0.95) 0%, rgba(11, 15, 42, 0.98) 100%);
+  border: 1px solid var(--dash-border);
+  border-top: 3px solid var(--dash-secondary);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  height: 100%;
+}
+
+.dash-stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--dash-secondary);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.2);
+}
+
+.stat-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: rgba(79, 70, 229, 0.2);
+  border: 1px solid var(--dash-border);
+  color: var(--dash-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.stat-value {
+  font-size: 1.7rem;
+  font-family: var(--dash-font-heading);
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--dash-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+/* Content Box / Card */
+.dash-content-box {
+  background: linear-gradient(180deg, rgba(17, 24, 62, 0.94) 0%, rgba(11, 15, 42, 0.98) 100%);
+  border: 1px solid var(--dash-border);
+  border-radius: 12px;
+  padding: 1.4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.box-title {
+  font-family: var(--dash-font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.box-title i {
+  color: var(--dash-secondary);
+  font-size: 1.05rem;
+}
+
+/* Data Tables */
+.dash-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0;
+}
+
+.dash-table th {
+  background: rgba(11, 15, 42, 0.95);
+  color: var(--dash-secondary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid var(--dash-border);
+  white-space: nowrap;
+}
+
+.dash-table td {
+  padding: 0.9rem 1rem;
+  color: #CBD5E1;
+  font-size: 0.86rem;
+  border-bottom: 1px solid rgba(79, 70, 229, 0.15);
+  vertical-align: middle;
+}
+
+.dash-table tr:hover td {
+  background: rgba(79, 70, 229, 0.08);
+}
+
+/* Badges */
+.badge-gold,
+.badge-theme {
+  background: rgba(251, 191, 36, 0.16);
+  color: var(--dash-secondary);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.badge-green {
+  background: rgba(16, 185, 129, 0.16);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.badge-blue {
+  background: rgba(79, 70, 229, 0.18);
+  color: #818CF8;
+  border: 1px solid rgba(79, 70, 229, 0.35);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.badge-purple {
+  background: rgba(139, 92, 246, 0.16);
+  color: #C084FC;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.badge-amber {
+  background: rgba(245, 158, 11, 0.16);
+  color: #FBBF24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Action Buttons */
+.btn-gold-sm,
+.btn-theme-sm {
+  background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+  color: #FFFFFF !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.btn-gold-sm:hover,
+.btn-theme-sm:hover {
+  background: linear-gradient(135deg, #4338CA 0%, #3730A3 100%);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-outline-gold-sm,
+.btn-outline-theme-sm {
+  background: rgba(17, 24, 62, 0.85);
+  border: 1px solid var(--dash-border);
+  color: var(--dash-secondary) !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-gold-sm:hover,
+.btn-outline-theme-sm:hover {
+  background: rgba(79, 70, 229, 0.2);
+  border-color: var(--dash-secondary);
+  color: #FFFFFF !important;
+}
+
+.btn-amber-sm {
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 100%);
+  color: #0B0F2A !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.45rem 0.95rem;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-amber-sm:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.4);
+}
+
+/* Search and Filters */
+.dash-search-input {
+  background: var(--dash-bg-input);
+  border: 1px solid var(--dash-border);
+  color: #FFFFFF;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.dash-search-input:focus {
+  outline: none;
+  border-color: var(--dash-secondary);
+  box-shadow: 0 0 0 2px var(--dash-glow-gold);
+}
+
+/* Progress Bars */
+.dash-progress-wrap {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dash-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* -------------------------------------------------------------------
+   4. RESPONSIVE BREAKPOINTS (DOWN TO 320PX)
+   ------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .dash-sidebar {
+    transform: translateX(-100%);
+  }
+  .dash-sidebar.active {
+    transform: translateX(0);
+  }
+  .dash-main {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body.dash-page-body {
+    padding: 1rem 0.75rem;
+  }
+  .dash-page-title {
+    font-size: 1.35rem;
+  }
+  .dash-stat-card {
+    padding: 1rem;
+  }
+  .stat-value {
+    font-size: 1.35rem;
+  }
+  .dash-content-box {
+    padding: 1rem;
+  }
+}
+
+/* 320px Micro Viewport Defense */
+@media (max-width: 340px) {
+  body.dash-page-body {
+    padding: 0.75rem 0.5rem !important;
+  }
+  .dash-page-title {
+    font-size: 1.2rem !important;
+  }
+  .dash-page-subtitle {
+    font-size: 0.75rem !important;
+  }
+  .dash-stat-card {
+    padding: 0.75rem !important;
+  }
+  .stat-value {
+    font-size: 1.2rem !important;
+  }
+  .stat-label {
+    font-size: 0.68rem !important;
+  }
+  .dash-content-box {
+    padding: 0.75rem 0.5rem !important;
+  }
+  .box-title {
+    font-size: 0.95rem !important;
+  }
+  .btn-gold-sm, .btn-theme-sm, .btn-outline-gold-sm, .btn-amber-sm {
+    font-size: 0.72rem !important;
+    padding: 0.35rem 0.6rem !important;
+  }
+  .dash-table th, .dash-table td {
+    padding: 0.5rem 0.6rem !important;
+    font-size: 0.76rem !important;
+  }
+}

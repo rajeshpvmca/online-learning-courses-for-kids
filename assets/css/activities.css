@@ -1,0 +1,119 @@
+/* ===================================================================
+   STACKLY KIDS ACADEMY - FUN ZONE & ACTIVITIES STYLESHEET
+   File: assets/css/activities.css
+   Theme: Online Learning Courses For Kids (Ages 4 - 15)
+   Contains: Specific styles for Activities & Fun Zone page
+   =================================================================== */
+
+/* Mini Game Cards */
+.mini-game-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-sun-yellow);
+}
+
+.mini-game-thumb {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mini-game-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-reward-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-sun-yellow);
+  color: var(--text-dark);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+/* Printable Worksheets Card */
+.printable-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1.5px dashed rgba(79, 70, 229, 0.25);
+  transition: all 0.25s ease;
+  height: 100%;
+}
+
+.printable-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Leaderboard Table */
+.leaderboard-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.leaderboard-rank-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.rank-1 { background: #FEF08A; color: #854D0E; }
+.rank-2 { background: #E2E8F0; color: #475569; }
+.rank-3 { background: #FFEDD5; color: #9A3412; }
+
+/* Hall of Fame Badges Grid */
+.hall-badge-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: all 0.3s ease;
+}
+
+.hall-badge-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: var(--shadow-md);
+}
+
+.hall-badge-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}

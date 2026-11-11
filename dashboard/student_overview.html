@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Overview | Stackly Kids Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-page-body">
+
+    <!-- Page Header -->
+    <div class="dash-page-header">
+        <div>
+            <h1 class="dash-page-title">Welcome Back, Toby! 🚀</h1>
+            <p class="dash-page-subtitle">Track your live classes, level up your coding skills, and collect Star Gems.</p>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <span class="badge-gold"><i class="fa-solid fa-fire text-danger me-1"></i> 7-Day Streak</span>
+            <span class="badge-theme"><i class="fa-solid fa-gem text-warning me-1"></i> 2,450 Gems</span>
+        </div>
+    </div>
+
+    <!-- Gamified Kid Banner -->
+    <div class="dash-welcome-banner">
+        <div class="row align-items-center g-3">
+            <div class="col-12 col-md-7">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="user-avatar" style="width: 58px; height: 58px; font-size: 1.5rem;">🚀</div>
+                    <div>
+                        <div class="d-flex align-items-center gap-2">
+                            <h4 class="fw-bold text-white mb-0">Level 5 Code Ninja</h4>
+                            <span class="badge bg-sun-yellow text-dark fw-bold rounded-pill px-2 py-1 small">Ages 8-10</span>
+                        </div>
+                        <p class="text-white-50 small mb-2">You are only 150 XP away from unlocking the Cyber Dragon Badge!</p>
+                        <div class="dash-progress-wrap" style="width: 220px; max-width: 100%;">
+                            <div class="dash-progress-fill" style="width: 78%; background: linear-gradient(90deg, #4F46E5, #FBBF24);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 text-md-end">
+                <a href="student_courses.html" class="btn-amber-sm">
+                    <i class="fa-solid fa-play me-1"></i> Continue Coding Class
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stat Metrics -->
+    <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3">
+            <div class="dash-stat-card">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="stat-label">Active Courses</span>
+                    <div class="stat-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                </div>
+                <div class="stat-value">4</div>
+                <span class="badge-blue small"><i class="fa-solid fa-circle-check me-1"></i> Scratch &amp; Python</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="dash-stat-card">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="stat-label">Hours Learned</span>
+                    <div class="stat-icon-box"><i class="fa-solid fa-clock"></i></div>
+                </div>
+                <div class="stat-value">38.5</div>
+                <span class="badge-green small"><i class="fa-solid fa-arrow-up me-1"></i> +4.5 hrs this week</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="dash-stat-card">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="stat-label">Projects Built</span>
+                    <div class="stat-icon-box"><i class="fa-solid fa-gamepad"></i></div>
+                </div>
+                <div class="stat-value">12</div>
+                <span class="badge-purple small"><i class="fa-solid fa-star me-1"></i> 3 Shared Publicly</span>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="dash-stat-card">
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="stat-label">Badges Earned</span>
+                    <div class="stat-icon-box"><i class="fa-solid fa-trophy"></i></div>
+                </div>
+                <div class="stat-value">14</div>
+                <span class="badge-gold small"><i class="fa-solid fa-award me-1"></i> Top 5% Rank</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Schedule & Next Class -->
+    <div class="row g-4">
+        <div class="col-12 col-lg-7">
+            <div class="dash-content-box">
+                <div class="box-header">
+                    <h5 class="box-title"><i class="fa-solid fa-video"></i> Today's Live Virtual Class</h5>
+                    <span class="badge-green"><i class="fa-solid fa-satellite-dish me-1"></i> Starting in 25 min</span>
+                </div>
+                <div class="p-3 rounded-3 mb-3" style="background: rgba(79, 70, 229, 0.15); border: 1px solid rgba(79, 70, 229, 0.3);">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                        <div>
+                            <span class="badge bg-sun-yellow text-dark fw-bold rounded-pill px-2 py-1 small">Session #8</span>
+                            <h5 class="text-white fw-bold mb-0 mt-1">Scratch Game: Space Asteroid Blaster</h5>
+                        </div>
+                        <a href="https://zoom.us" target="_blank" class="btn-gold-sm">
+                            <i class="fa-solid fa-video me-1"></i> Join Zoom Class
+                        </a>
+                    </div>
+                    <div class="text-white-50 small mb-2">
+                        <i class="fa-solid fa-chalkboard-user text-warning me-1"></i> Mentor: <strong>Sarah Jenkins</strong> &bull; 
+                        <i class="fa-solid fa-clock text-warning me-1"></i> 4:00 PM &ndash; 5:00 PM IST
+                    </div>
+                    <p class="text-light small mb-0">Today we program collision physics, laser firing sound effects, and the game-over screen!</p>
+                </div>
+
+                <h6 class="text-white fw-bold mt-4 mb-3">Upcoming This Week</h6>
+                <div class="d-flex flex-column gap-2">
+                    <div class="p-2 px-3 rounded-2 d-flex justify-content-between align-items-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                        <div>
+                            <strong class="text-white d-block small">LEGO Robotics: Ultrasonic Sensor Lab</strong>
+                            <span class="text-white-50" style="font-size: 0.76rem;">Wednesday, 5:30 PM IST &bull; Mr. David Sterling</span>
+                        </div>
+                        <span class="badge-blue small">Confirmed</span>
+                    </div>
+                    <div class="p-2 px-3 rounded-2 d-flex justify-content-between align-items-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                        <div>
+                            <strong class="text-white d-block small">Fun Mental Math Speed Arena</strong>
+                            <span class="text-white-50" style="font-size: 0.76rem;">Friday, 4:30 PM IST &bull; Dr. Priya Anand</span>
+                        </div>
+                        <span class="badge-gold small">Quiz Battle</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+            <!-- Daily Brain Quest Widget -->
+            <div class="dash-content-box">
+                <div class="box-header">
+                    <h5 class="box-title"><i class="fa-solid fa-puzzle-piece"></i> Daily Brain Quest</h5>
+                    <span class="badge-gold">+50 Gems</span>
+                </div>
+                <p class="text-light small mb-3">
+                    <strong>Code Puzzle of the Day:</strong> A robot takes 3 steps forward, turns 90° right, repeats this 4 times. What shape does it trace?
+                </p>
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-outline-light text-start py-2 px-3 small border-secondary" onclick="this.classList.add('btn-success'); this.innerHTML='<i class=\'fa-solid fa-check me-2\'></i>Correct! You drew a Square (+50 Gems claimed!)';">
+                        A) Square
+                    </button>
+                    <button class="btn btn-outline-light text-start py-2 px-3 small border-secondary" onclick="this.classList.add('btn-danger');">
+                        B) Triangle
+                    </button>
+                    <button class="btn btn-outline-light text-start py-2 px-3 small border-secondary" onclick="this.classList.add('btn-danger');">
+                        C) Straight Line
+                    </button>
+                </div>
+                <div class="text-center">
+                    <span class="text-white-50" style="font-size: 0.75rem;">Resets every 24 hours at midnight IST</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

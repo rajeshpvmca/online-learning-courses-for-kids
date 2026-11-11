@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Roster | Stackly Kids Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-page-body">
+
+    <div class="dash-page-header">
+        <div>
+            <h1 class="dash-page-title">Student Roster &amp; Learner Directory 👨‍🎓</h1>
+            <p class="dash-page-subtitle">Track academic progress, attendance records, star gems, and parental communication for your 42 active learners.</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+            <button class="btn-amber-sm" onclick="awardGlobalStars()">
+                <i class="fa-solid fa-gem me-1"></i> Reward Cohort Stars
+            </button>
+            <button class="btn-primary-sm" onclick="exportStudentCSV()">
+                <i class="fa-solid fa-file-excel me-1"></i> Export Attendance
+            </button>
+        </div>
+    </div>
+
+    <!-- Filter & Search Toolbar -->
+    <div class="dash-content-box mb-4 py-3">
+        <div class="row g-2 align-items-center">
+            <div class="col-12 col-md-5">
+                <div class="input-group">
+                    <span class="input-group-text bg-transparent border-secondary border-opacity-50 text-white-50"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="studentSearch" onkeyup="filterStudents()" class="form-control" placeholder="Search by student name or parent email..." 
+                        style="background: rgba(11, 15, 42, 0.8); border: 1px solid rgba(79, 70, 229, 0.35); color: #fff;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <select id="courseFilter" onchange="filterStudents()" class="form-select" style="background: rgba(11, 15, 42, 0.8); border: 1px solid rgba(79, 70, 229, 0.35); color: #fff;">
+                    <option value="all">All Enrolled Courses</option>
+                    <option value="Scratch">Scratch 3.0 Game Dev</option>
+                    <option value="Python">Python 3 Minecraft</option>
+                    <option value="Robotics">LEGO Spike Prime</option>
+                    <option value="Art">Digital Art &amp; Animation</option>
+                </select>
+            </div>
+            <div class="col-6 col-md-3 text-end">
+                <span class="badge-indigo px-3 py-2">Total: 42 Students</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Students Table -->
+    <div class="dash-content-box">
+        <div class="table-responsive">
+            <table class="dash-table" id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Grade &amp; Age</th>
+                        <th>Active Course</th>
+                        <th>Attendance</th>
+                        <th>Level &amp; Gems</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="user-avatar" style="background: linear-gradient(135deg, #4F46E5, #6366F1); width: 36px; height: 36px; font-size: 0.85rem;">TW</div>
+                                <div>
+                                    <strong class="text-white">Toby Watson</strong>
+                                    <div class="text-white-50 small">Parent: Robert Watson</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Grade 4 (9 yrs)</td>
+                        <td><span class="badge-indigo">Scratch 3.0</span></td>
+                        <td><strong class="text-success">96%</strong> (11/12)</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-1 text-warning fw-bold small">
+                                <i class="fa-solid fa-gem text-amber"></i> 1,450 (Lvl 5)
+                            </div>
+                        </td>
+                        <td><span class="badge-green">On Track</span></td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                <button class="btn-amber-sm" onclick="awardSingleStar('Toby Watson')"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn-primary-sm" onclick="msgParent('Robert Watson', 'toby@watson.co.uk')"><i class="fa-solid fa-envelope"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="user-avatar" style="background: linear-gradient(135deg, #F59E0B, #FBBF24); color: #0B0F2A; width: 36px; height: 36px; font-size: 0.85rem;">KR</div>
+                                <div>
+                                    <strong class="text-white">Kavin R.</strong>
+                                    <div class="text-white-50 small">Parent: Rajesh Kumar (Salem)</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Grade 5 (10 yrs)</td>
+                        <td><span class="badge-coral">LEGO Robotics</span></td>
+                        <td><strong class="text-success">100%</strong> (12/12)</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-1 text-warning fw-bold small">
+                                <i class="fa-solid fa-gem text-amber"></i> 1,820 (Lvl 6)
+                            </div>
+                        </td>
+                        <td><span class="badge-green">Top Performer</span></td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                <button class="btn-amber-sm" onclick="awardSingleStar('Kavin R.')"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn-primary-sm" onclick="msgParent('Rajesh Kumar', 'rajesh@example.com')"><i class="fa-solid fa-envelope"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="user-avatar" style="background: linear-gradient(135deg, #10B981, #059669); width: 36px; height: 36px; font-size: 0.85rem;">SK</div>
+                                <div>
+                                    <strong class="text-white">Sophia K.</strong>
+                                    <div class="text-white-50 small">Parent: Elena Kolov</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Grade 3 (8 yrs)</td>
+                        <td><span class="badge-indigo">Scratch 3.0</span></td>
+                        <td><strong class="text-warning">91%</strong> (10/11)</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-1 text-warning fw-bold small">
+                                <i class="fa-solid fa-gem text-amber"></i> 980 (Lvl 3)
+                            </div>
+                        </td>
+                        <td><span class="badge-amber">Needs Practice</span></td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                <button class="btn-amber-sm" onclick="awardSingleStar('Sophia K.')"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn-primary-sm" onclick="msgParent('Elena Kolov', 'elena@example.com')"><i class="fa-solid fa-envelope"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="user-avatar" style="background: linear-gradient(135deg, #EC4899, #F43F5E); width: 36px; height: 36px; font-size: 0.85rem;">AM</div>
+                                <div>
+                                    <strong class="text-white">Aarav M.</strong>
+                                    <div class="text-white-50 small">Parent: Meera Murthy (Salem)</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Grade 6 (11 yrs)</td>
+                        <td><span class="badge-mint">Python 3</span></td>
+                        <td><strong class="text-success">98%</strong> (12/12)</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-1 text-warning fw-bold small">
+                                <i class="fa-solid fa-gem text-amber"></i> 2,100 (Lvl 7)
+                            </div>
+                        </td>
+                        <td><span class="badge-green">Advanced Prodigy</span></td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                <button class="btn-amber-sm" onclick="awardSingleStar('Aarav M.')"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn-primary-sm" onclick="msgParent('Meera Murthy', 'meera@example.com')"><i class="fa-solid fa-envelope"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="user-avatar" style="background: linear-gradient(135deg, #8B5CF6, #6D28D9); width: 36px; height: 36px; font-size: 0.85rem;">AS</div>
+                                <div>
+                                    <strong class="text-white">Ananya S.</strong>
+                                    <div class="text-white-50 small">Parent: Senthil Nathan</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Grade 4 (9 yrs)</td>
+                        <td><span class="badge-amber">Digital Art</span></td>
+                        <td><strong class="text-success">95%</strong> (11/12)</td>
+                        <td>
+                            <div class="d-flex align-items-center gap-1 text-warning fw-bold small">
+                                <i class="fa-solid fa-gem text-amber"></i> 1,320 (Lvl 4)
+                            </div>
+                        </td>
+                        <td><span class="badge-green">Creative Genius</span></td>
+                        <td>
+                            <div class="d-flex gap-1">
+                                <button class="btn-amber-sm" onclick="awardSingleStar('Ananya S.')"><i class="fa-solid fa-star"></i></button>
+                                <button class="btn-primary-sm" onclick="msgParent('Senthil Nathan', 'senthil@example.com')"><i class="fa-solid fa-envelope"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function filterStudents() {
+            const query = document.getElementById('studentSearch').value.toLowerCase();
+            const course = document.getElementById('courseFilter').value.toLowerCase();
+            const rows = document.querySelectorAll('#studentsTable tbody tr');
+
+            rows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                const matchesQuery = text.includes(query);
+                const matchesCourse = course === 'all' || text.includes(course);
+                row.style.display = matchesQuery && matchesCourse ? '' : 'none';
+            });
+        }
+
+        function awardSingleStar(name) {
+            const count = prompt("How many Star Gems would you like to reward to " + name + "?", "50");
+            if (count) {
+                alert("🌟 Awesome! " + count + " Star Gems rewarded to " + name + ". Their profile updated instantly!");
+            }
+        }
+
+        function awardGlobalStars() {
+            const count = prompt("Reward Star Gems to all active cohort students:", "25");
+            if (count) {
+                alert("🎉 " + count + " Star Gems credited to all 42 enrolled learners!");
+            }
+        }
+
+        function msgParent(parentName, email) {
+            const msg = prompt("Compose quick message to " + parentName + " (" + email + "):");
+            if (msg) {
+                alert("Message dispatched to " + parentName + " via SMS & Email: \"" + msg + "\"");
+            }
+        }
+
+        function exportStudentCSV() {
+            alert("Exporting Student Attendance & Progress Ledger (CSV) for November 2026...");
+        }
+    </script>
+</body>
+</html>

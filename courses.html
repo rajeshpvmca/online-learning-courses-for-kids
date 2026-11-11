@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>All Courses &amp; Programs | Coding, Robotics &amp; STEM | Stackly Kids Academy</title>
+  <meta name="description" content="Explore 40+ interactive online courses for kids ages 4-15: Scratch coding, Python, robotics, STEM science, creative art, and mental math. Small groups &amp; 1:1 classes.">
+
+  <!-- Favicon: Official Stackly Logo -->
+  <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp">
+
+  <!-- Google Fonts: Fredoka & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6.5.2 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Page Specific Stylesheet -->
+  <link rel="stylesheet" href="assets/css/courses.css">
+</head>
+<body>
+
+  <!-- Common Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ===================================================================
+         SECTION 1: STANDARDIZED PAGE BANNER & BREADCRUMBS
+         =================================================================== -->
+    <section class="page-banner-section position-relative">
+      <div class="container position-relative z-2">
+        <div class="row">
+          <div class="col-12 col-lg-9" data-aos="fade-up">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Courses &amp; Programs</li>
+              </ol>
+            </nav>
+            <h1 class="page-banner-title">Interactive Courses Designed to Spark Child Genius</h1>
+            <p class="page-banner-desc">
+              From drag-and-drop Scratch games for little learners to Python coding, hands-on robotics hardware, and digital cartoon design. Every course features live expert mentors and hands-on projects!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: INTERACTIVE CATEGORY & AGE FILTER TABS
+         =================================================================== -->
+    <section class="py-4 bg-white border-bottom" id="filter-nav">
+      <div class="container">
+        <div class="course-filter-nav">
+          <button class="filter-btn-pill active" onclick="filterCourses('all', this)">
+            <i class="fa-solid fa-layer-group me-1"></i> All Tracks (12)
+          </button>
+          <button class="filter-btn-pill" onclick="filterCourses('coding', this)">
+            <i class="fa-solid fa-laptop-code text-primary me-1"></i> Coding &amp; Games
+          </button>
+          <button class="filter-btn-pill" onclick="filterCourses('stem', this)">
+            <i class="fa-solid fa-atom text-cyan me-1"></i> Robotics &amp; STEM
+          </button>
+          <button class="filter-btn-pill" onclick="filterCourses('art', this)">
+            <i class="fa-solid fa-palette text-coral me-1"></i> Creative Arts
+          </button>
+          <button class="filter-btn-pill" onclick="filterCourses('math', this)">
+            <i class="fa-solid fa-calculator text-warning me-1"></i> Math &amp; Logic
+          </button>
+          <button class="filter-btn-pill" onclick="filterCourses('speaking', this)">
+            <i class="fa-solid fa-microphone text-mint me-1"></i> Speaking &amp; Languages
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: COMPREHENSIVE 12-COURSE INTERACTIVE GRID
+         =================================================================== -->
+    <section class="py-5" id="course-grid">
+      <div class="container py-3">
+        <div class="row g-4" id="coursesRow">
+
+          <!-- Course 1: Scratch Arcade -->
+          <div class="col-12 col-md-6 col-lg-4 course-item coding" data-aos="fade-up">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_scratch_coding.webp" alt="Scratch Game Coding">
+                <span class="course-tag bg-sun-yellow text-dark">BESTSELLER</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.95 (1,420)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-indigo text-primary-indigo rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 7-11 &bull; Coding</span>
+                <h3 class="course-title">Scratch 3.0: Build 10 Awesome Arcade Games</h3>
+                <p class="text-muted small flex-grow-1">Learn loops, variables, physics, and character animations by coding playable games like Flappy Bird and Space Invaders.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-video text-coral me-1"></i> 16 Live Sessions</span>
+                  <span><i class="fa-solid fa-medal text-mint me-1"></i> Certificate</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£89</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2: Robotics & AI -->
+          <div class="col-12 col-md-6 col-lg-4 course-item stem" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_robotics_ai.webp" alt="Robotics & AI Lab">
+                <span class="course-tag bg-cyan text-white">HARDWARE KIT INCLUDED</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.98 (980)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-cyan text-cyan rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 8-14 &bull; STEM</span>
+                <h3 class="course-title">Junior Robotics &amp; Smart Sensors Lab</h3>
+                <p class="text-muted small flex-grow-1">Receive a real electronic rover kit at home. Wire microcontrollers, sound sensors, and write AI motor scripts.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-box text-cyan me-1"></i> Free Hardware Kit</span>
+                  <span><i class="fa-solid fa-microchip text-primary-indigo me-1"></i> 1:1 Live Help</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£129</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: STEM Science Lab -->
+          <div class="col-12 col-md-6 col-lg-4 course-item stem" data-aos="fade-up" data-aos-delay="200">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_stem_science.webp" alt="STEM Science Lab">
+                <span class="course-tag bg-mint text-white">HOME EXPERIMENTS</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.92 (840)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-mint text-mint rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 6-12 &bull; STEM</span>
+                <h3 class="course-title">Mad Science Lab: Kitchen Physics &amp; Chemistry</h3>
+                <p class="text-muted small flex-grow-1">Hands-on weekly experiments with volcanoes, slime density, optical prisms, and electromagnetic coils.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-flask text-mint me-1"></i> 12 Lab Projects</span>
+                  <span><i class="fa-solid fa-book text-coral me-1"></i> Printable Lab Notebook</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£75</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4: Creative Digital Art -->
+          <div class="col-12 col-md-6 col-lg-4 course-item art" data-aos="fade-up">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_creative_art.webp" alt="Creative Digital Art">
+                <span class="course-tag bg-coral text-white">ART &amp; DESIGN</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.96 (1,150)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-coral text-coral rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 7-13 &bull; Arts</span>
+                <h3 class="course-title">Digital Art, Character Design &amp; 2D Animation</h3>
+                <p class="text-muted small flex-grow-1">Master drawing tablets and software. Create cartoon monsters, fantasy heroes, and short animated movies.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-palette text-coral me-1"></i> 14 Art Projects</span>
+                  <span><i class="fa-solid fa-images text-purple me-1"></i> Digital Gallery</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£85</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 5: Math Wizards -->
+          <div class="col-12 col-md-6 col-lg-4 course-item math" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_math_magic.webp" alt="Math Wizards Speed Math">
+                <span class="course-tag bg-purple text-white">OLYMPIAD LOGIC</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.94 (790)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-purple text-purple rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 6-12 &bull; Mathematics</span>
+                <h3 class="course-title">Mental Math Wizards &amp; Vedic Speed Math</h3>
+                <p class="text-muted small flex-grow-1">Turn math anxiety into joy. Solve 3-digit multiplication in seconds using visual patterns and riddles.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-brain text-purple me-1"></i> Weekly Quests</span>
+                  <span><i class="fa-solid fa-trophy text-sun-yellow me-1"></i> Competition Prep</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£79</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 6: Public Speaking -->
+          <div class="col-12 col-md-6 col-lg-4 course-item speaking" data-aos="fade-up" data-aos-delay="200">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_public_speaking.webp" alt="Public Speaking and Debate">
+                <span class="course-tag bg-sun-yellow text-dark">CONFIDENCE</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.97 (910)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-yellow text-sun-yellow-dark rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 8-15 &bull; Speaking</span>
+                <h3 class="course-title">Young TED Talkers: Public Speaking &amp; Debate</h3>
+                <p class="text-muted small flex-grow-1">Learn speech crafting, storytelling, impromptu debates, body language, and voice modulation in micro groups.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-microphone text-coral me-1"></i> 8 Live Speeches</span>
+                  <span><i class="fa-solid fa-users text-cyan me-1"></i> Max 5 Students</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£95</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 7: Game Design Roblox & Minecraft -->
+          <div class="col-12 col-md-6 col-lg-4 course-item coding" data-aos="fade-up">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_game_design.webp" alt="Roblox and Minecraft Game Design">
+                <span class="course-tag bg-coral text-white">TRENDING</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.98 (2,100)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-coral text-coral rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 9-15 &bull; 3D Games</span>
+                <h3 class="course-title">Roblox Studio &amp; Lua Scripting Masterclass</h3>
+                <p class="text-muted small flex-grow-1">Turn game players into game developers! Build multi-player worlds, parkour obbys, and earn virtual Robux.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-gamepad text-coral me-1"></i> 5 Playable Games</span>
+                  <span><i class="fa-solid fa-cloud-arrow-up text-primary me-1"></i> Publish on Roblox</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£99</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 8: Digital Music & Beats -->
+          <div class="col-12 col-md-6 col-lg-4 course-item art" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_digital_music.webp" alt="Digital Music & Beats">
+                <span class="course-tag bg-cyan text-white">SOUND LAB</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.91 (430)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-cyan text-cyan rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 8-14 &bull; Music</span>
+                <h3 class="course-title">Digital Music Production &amp; Game Soundtracks</h3>
+                <p class="text-muted small flex-grow-1">Create catchy synth melodies, electronic hip-hop beats, and sound effects for video games using BandLab.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-headphones text-cyan me-1"></i> 6 Original Songs</span>
+                  <span><i class="fa-solid fa-compact-disc text-purple me-1"></i> Spotify Ready</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£79</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 9: World Languages for Kids -->
+          <div class="col-12 col-md-6 col-lg-4 course-item speaking" data-aos="fade-up" data-aos-delay="200">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_world_languages.webp" alt="World Languages for Kids">
+                <span class="course-tag bg-mint text-white">BILINGUAL</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.93 (610)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-mint text-mint rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 5-12 &bull; Languages</span>
+                <h3 class="course-title">Little Polyglots: Conversational Spanish &amp; French</h3>
+                <p class="text-muted small flex-grow-1">Learn through interactive songs, animated puppets, cultural cooking stories, and conversational roleplay.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-comments text-mint me-1"></i> Native Tutors</span>
+                  <span><i class="fa-solid fa-passport text-coral me-1"></i> Global Quests</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£85</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 10: Creative Storytelling & Comics -->
+          <div class="col-12 col-md-6 col-lg-4 course-item art" data-aos="fade-up">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_creative_writing.webp" alt="Creative Storytelling and Comics">
+                <span class="course-tag bg-purple text-white">IMAGINATION</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.96 (510)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-purple text-purple rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 7-13 &bull; Writing</span>
+                <h3 class="course-title">Comic Book Creators: Creative Writing &amp; Lore</h3>
+                <p class="text-muted small flex-grow-1">Build epic fantasy universes, write compelling villains, design plot twists, and illustrate your own published comic.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-book-open text-purple me-1"></i> 1 Printed Book</span>
+                  <span><i class="fa-solid fa-feather text-coral me-1"></i> Story Architecture</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£82</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 11: Astronomy & Space Science -->
+          <div class="col-12 col-md-6 col-lg-4 course-item stem" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_astronomy_space.webp" alt="Astronomy and Space Science">
+                <span class="course-tag bg-cyan text-white">COSMOS</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.97 (730)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-cyan text-cyan rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 7-14 &bull; STEM</span>
+                <h3 class="course-title">Junior Astronomers: Black Holes &amp; Rocket Science</h3>
+                <p class="text-muted small flex-grow-1">Simulate orbital mechanics, design rocket heat shields, and explore planets through virtual NASA telescope feeds.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-shuttle-space text-cyan me-1"></i> NASA Data Feeds</span>
+                  <span><i class="fa-solid fa-star text-sun-yellow me-1"></i> Virtual Stargazing</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£88</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 12: Critical Thinking & Chess -->
+          <div class="col-12 col-md-6 col-lg-4 course-item math" data-aos="fade-up" data-aos-delay="200">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_critical_thinking.webp" alt="Critical Thinking and Chess">
+                <span class="course-tag bg-sun-yellow text-dark">STRATEGY</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.95 (870)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-yellow text-sun-yellow-dark rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 6-15 &bull; Strategy</span>
+                <h3 class="course-title">Junior Grandmasters: Chess Tactics &amp; Strategic Logic</h3>
+                <p class="text-muted small flex-grow-1">Taught by FIDE-rated coaches. Master openings, endgame puzzles, pattern recognition, and calm analytical decision-making.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-chess-knight text-purple me-1"></i> Weekly Tournaments</span>
+                  <span><i class="fa-solid fa-ranking-star text-sun-yellow me-1"></i> ELO Rating Track</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="course-price">£79</span>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: AGE-BY-AGE CURRICULUM PROGRESSION ROADMAP
+         =================================================================== -->
+    <section class="py-5 bg-white" id="curriculum-roadmap">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-indigo text-primary-indigo fw-bold rounded-pill px-3 py-2 mb-2">CURRICULUM ARCHITECTURE</span>
+          <h2 class="display-6 fw-bold">Structured Learning Progression (Ages 4-15)</h2>
+          <p class="text-muted">How children seamlessly progress from visual block drag-and-drop to industry-standard Python and robotics hardware.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="curriculum-milestone-box box-yellow">
+              <span class="badge bg-soft-yellow text-sun-yellow-dark fw-bold rounded-pill mb-2">FOUNDATION (AGES 4-6)</span>
+              <h4 class="fw-bold mb-3">Playful Exploration</h4>
+              <ul class="list-unstyled small text-muted">
+                <li class="mb-2"><i class="fa-solid fa-check text-sun-yellow me-2"></i> Directional sequencing &amp; loops</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-sun-yellow me-2"></i> ScratchJr character animations</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-sun-yellow me-2"></i> Tangible shape &amp; pattern recognition</li>
+                <li><i class="fa-solid fa-check text-sun-yellow me-2"></i> Screen-balance physical puzzles</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="curriculum-milestone-box box-coral">
+              <span class="badge bg-soft-coral text-coral fw-bold rounded-pill mb-2">DISCOVERY (AGES 7-9)</span>
+              <h4 class="fw-bold mb-3">Creative Maker</h4>
+              <ul class="list-unstyled small text-muted">
+                <li class="mb-2"><i class="fa-solid fa-check text-coral me-2"></i> Scratch 3.0 arcade game design</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-coral me-2"></i> Conditionals, variables &amp; timers</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-coral me-2"></i> LEGO WeDo &amp; motor controllers</li>
+                <li><i class="fa-solid fa-check text-coral me-2"></i> Digital illustration basics</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="curriculum-milestone-box box-cyan">
+              <span class="badge bg-soft-cyan text-cyan fw-bold rounded-pill mb-2">INNOVATION (AGES 10-12)</span>
+              <h4 class="fw-bold mb-3">Young Engineer</h4>
+              <ul class="list-unstyled small text-muted">
+                <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2"></i> Python fundamentals &amp; Turtle graphics</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2"></i> Roblox 3.0 world scripting (Lua)</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-cyan me-2"></i> Arduino circuit breadboarding</li>
+                <li><i class="fa-solid fa-check text-cyan me-2"></i> Structured speech &amp; debate</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="curriculum-milestone-box box-mint">
+              <span class="badge bg-soft-mint text-mint fw-bold rounded-pill mb-2">MASTERY (AGES 13-15)</span>
+              <h4 class="fw-bold mb-3">Tech Innovator</h4>
+              <ul class="list-unstyled small text-muted">
+                <li class="mb-2"><i class="fa-solid fa-check text-mint me-2"></i> AI machine learning prototypes</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-mint me-2"></i> Full-stack web app development</li>
+                <li class="mb-2"><i class="fa-solid fa-check text-mint me-2"></i> Unity 2D/3D game engineering</li>
+                <li><i class="fa-solid fa-check text-mint me-2"></i> Global hackathon competitions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: WHAT EVERY COURSE INCLUDES
+         =================================================================== -->
+    <section class="py-5" id="inclusions">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-mint text-mint fw-bold rounded-pill px-3 py-2 mb-2">ALL-INCLUSIVE PROMISE</span>
+          <h2 class="display-6 fw-bold">Everything Included in Your Enrollment</h2>
+          <p class="text-muted">No hidden surprise software costs or textbook fees. Everything is covered from day one.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="inclusion-pill-card">
+              <div class="inclusion-icon-wrap bg-soft-indigo text-primary-indigo">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Live 1:1 or Micro Cohorts</h5>
+                <p class="text-muted small mb-0">Never pre-recorded video lectures. Real-time guidance with max 4 kids.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="inclusion-pill-card">
+              <div class="inclusion-icon-wrap bg-soft-coral text-coral">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Hardware Kit to Your Door</h5>
+                <p class="text-muted small mb-0">Robotics &amp; STEM courses include physical kits delivered free in the UK.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="inclusion-pill-card">
+              <div class="inclusion-icon-wrap bg-soft-cyan text-cyan">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Parent Weekly Progress Digest</h5>
+                <p class="text-muted small mb-0">Detailed video recap &amp; learning metrics sent to your email every Friday.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="inclusion-pill-card">
+              <div class="inclusion-icon-wrap bg-soft-yellow text-sun-yellow-dark">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Accredited Certificate</h5>
+                <p class="text-muted small mb-0">STEM.org certified digital diploma with unique verification QR code.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="inclusion-pill-card">
+              <div class="inclusion-icon-wrap bg-soft-mint text-mint">
+                <i class="fa-solid fa-arrows-rotate"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Free Flexible Rescheduling</h5>
+                <p class="text-muted small mb-0">Change lesson times up to 4 hours in advance at zero extra cost.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="inclusion-pill-card">
+              <div class="inclusion-icon-wrap bg-soft-purple text-purple">
+                <i class="fa-solid fa-infinity"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Lifetime Recording Access</h5>
+                <p class="text-muted small mb-0">Review past projects and lessons anytime in the child learning portal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: FREE DOWNLOADABLE SYLLABUS & ACTIVITIES
+         =================================================================== -->
+    <section class="py-5" id="download-syllabus">
+      <div class="container py-4">
+        <div class="syllabus-download-card" data-aos="zoom-in">
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-8">
+              <span class="badge bg-sun-yellow text-dark fw-bold rounded-pill px-3 py-1 mb-3">
+                <i class="fa-solid fa-file-pdf me-1"></i> PARENT CURRICULUM GUIDE
+              </span>
+              <h2 class="display-6 fw-bold mb-3">Download the Complete 2026 Curriculum Syllabus</h2>
+              <p class="text-white-50 mb-0">
+                Get a comprehensive 32-page guide covering weekly lesson plans, software prerequisites, learning objectives, and Cambridge &amp; STEM.org alignment notes.
+              </p>
+            </div>
+            <div class="col-12 col-lg-4 text-lg-end">
+              <button class="btn btn-sun-yellow text-dark fw-bold px-4 py-3 rounded-pill shadow-lg" onclick="alert('📥 Downloading Stackly Kids 2026 Complete Curriculum Syllabus (PDF)...');">
+                <i class="fa-solid fa-cloud-arrow-down me-2"></i> Download Free PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: COURSE FINDER & MATCHMAKING ADVISOR
+         =================================================================== -->
+    <section class="py-5 bg-white" id="advisor">
+      <div class="container py-4 max-w-900">
+        <div class="p-4 p-md-5 rounded-4 bg-soft-indigo border text-center" data-aos="fade-up">
+          <span class="badge bg-primary-indigo text-white fw-bold rounded-pill px-3 py-1 mb-2">TALK TO AN ADVISOR</span>
+          <h2 class="display-6 fw-bold text-dark mb-3">Unsure Which Track Fits Your Child?</h2>
+          <p class="text-muted max-w-600 mx-auto mb-4">
+            Our Salem-based educational counselors are here to chat. We assess your child's interests and learning style in a friendly 5-minute phone consultation.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="tel:+919876543210" class="btn btn-hero-primary px-4 py-3">
+              <i class="fa-solid fa-phone-volume me-2"></i> Speak with Advisor: +91 9876543210
+            </a>
+            <a href="404.html" class="btn btn-outline-primary fw-bold rounded-pill px-4 py-3">
+              Request Callback
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: STUDENT SUCCESS HIGHLIGHTS FROM COURSES
+         =================================================================== -->
+    <section class="py-5" id="highlights">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-coral text-coral fw-bold rounded-pill px-3 py-2 mb-2">REAL ACHIEVEMENTS</span>
+          <h2 class="display-6 fw-bold">Recent Course Graduates in Action</h2>
+          <p class="text-muted">Every student graduates with real skills, high confidence, and a verified portfolio.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 rounded-4 shadow-sm overflow-hidden h-100">
+              <img src="assets/images/student_leo.webp" alt="Leo coding games" class="w-100" style="height: 220px; object-fit: cover;">
+              <div class="card-body p-4">
+                <span class="badge bg-soft-yellow text-sun-yellow-dark mb-2">Scratch Coding Track</span>
+                <h5 class="fw-bold mb-2">Leo (Age 8) &ndash; Published 4 Arcade Games</h5>
+                <p class="text-muted small mb-0">"Leo built his first multiplayer racing game after 8 weeks. He now teaches his younger brother how variables work!"</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 rounded-4 shadow-sm overflow-hidden h-100">
+              <img src="assets/images/student_sophia.webp" alt="Sophia with robotics model" class="w-100" style="height: 220px; object-fit: cover;">
+              <div class="card-body p-4">
+                <span class="badge bg-soft-cyan text-cyan mb-2">Robotics Hardware Track</span>
+                <h5 class="fw-bold mb-2">Sophia (Age 10) &ndash; Built Mars Rover</h5>
+                <p class="text-muted small mb-0">"Her motorized obstacle-avoiding bot took 1st prize at her school science expo in Manchester. Stackly made STEM come alive!"</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-0 rounded-4 shadow-sm overflow-hidden h-100">
+              <img src="assets/images/student_arjun.webp" alt="Arjun with math certification" class="w-100" style="height: 220px; object-fit: cover;">
+              <div class="card-body p-4">
+                <span class="badge bg-soft-mint text-mint mb-2">Mental Math Wizards</span>
+                <h5 class="fw-bold mb-2">Arjun (Age 11) &ndash; National Olympiad Medal</h5>
+                <p class="text-muted small mb-0">"Dr. Priya taught Arjun how to visualize large multiplication and square roots. Math transformed from his hardest subject to his favorite!"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 9: COURSE FREQUENTLY ASKED QUESTIONS
+         =================================================================== -->
+    <section class="py-5 bg-white" id="course-faq">
+      <div class="container py-4 max-w-900">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-yellow text-sun-yellow-dark fw-bold rounded-pill px-3 py-2 mb-2">CURRICULUM FAQS</span>
+          <h2 class="display-6 fw-bold">Questions About Our Courses</h2>
+        </div>
+
+        <div class="accordion accordion-kids" id="courseFaqAccordion" data-aos="fade-up">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="cFaq1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cCol1" aria-expanded="true" aria-controls="cCol1">
+                How many students are in each live class?
+              </button>
+            </h3>
+            <div id="cCol1" class="accordion-collapse collapse show" aria-labelledby="cFaq1" data-bs-parent="#courseFaqAccordion">
+              <div class="accordion-body text-muted">
+                We believe large group video calls fail children. Our courses are strictly limited to either 1-on-1 private mentoring or micro cohorts of 3 to 4 students of similar age and skill level.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="cFaq2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cCol2" aria-expanded="false" aria-controls="cCol2">
+                Can we switch courses if my child wants to try another topic?
+              </button>
+            </h3>
+            <div id="cCol2" class="accordion-collapse collapse" aria-labelledby="cFaq2" data-bs-parent="#courseFaqAccordion">
+              <div class="accordion-body text-muted">
+                Yes! Your enrolled course credits can be transferred to any other subject (e.g., from Coding to Art or Robotics) at any time through the parent dashboard.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="cFaq3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cCol3" aria-expanded="false" aria-controls="cCol3">
+                Do you provide homework and extra practice between classes?
+              </button>
+            </h3>
+            <div id="cCol3" class="accordion-collapse collapse" aria-labelledby="cFaq3" data-bs-parent="#courseFaqAccordion">
+              <div class="accordion-body text-muted">
+                We assign optional "Fun Quests" that take 15 to 20 minutes to complete. These are puzzle-based challenges where kids earn Star Gems for extra avatar unlocks in their learning portal.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 10: COURSE ENROLLMENT CTA
+         =================================================================== -->
+    <section class="py-5" id="course-cta">
+      <div class="container py-4">
+        <div class="grand-cta-banner text-center" data-aos="zoom-in">
+          <h2 class="display-5 fw-bold text-white mb-3">
+            Try Any Course with 2 Free Live Classes!
+          </h2>
+          <p class="text-white-50 max-w-700 mx-auto mb-4 fs-5">
+            Discover which subject sparks your child's eyes. Free 1-on-1 demo &bull; No credit card needed.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="404.html" class="btn btn-light text-dark fw-bold rounded-pill px-5 py-3 fs-5 shadow-lg">
+              Book Free Demo Class <i class="fa-solid fa-wand-magic-sparkles text-coral ms-2"></i>
+            </a>
+            <a href="404.html" class="btn btn-outline-white text-white fw-bold rounded-pill px-4 py-3 fs-6">
+              View Membership Pricing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Common Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/script.js"></script>
+
+  <!-- Filter Courses Script -->
+  <script>
+    function filterCourses(category, btn) {
+      document.querySelectorAll('.filter-btn-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const items = document.querySelectorAll('.course-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Studio | Stackly Kids Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-page-body">
+
+    <div class="dash-page-header">
+        <div>
+            <h1 class="dash-page-title">My Project Studio 🎨</h1>
+            <p class="dash-page-subtitle">Showcase your coding games, robotics builds, and digital artwork.</p>
+        </div>
+        <button class="btn-amber-sm" onclick="alert('Open Project Upload Modal: Upload your Scratch (.sb3), Python (.py), or Artwork image file.')">
+            <i class="fa-solid fa-cloud-arrow-up me-1"></i> Submit New Project
+        </button>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="dash-content-box h-100 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-sun-yellow text-dark fw-bold rounded-pill small">Scratch Game</span>
+                        <span class="badge-green small">Grade: A+</span>
+                    </div>
+                    <h5 class="text-white fw-bold mb-1">Space Asteroid Blaster</h5>
+                    <p class="text-white-50 small mb-3">Retro arcade shoot-em-up with health meters, laser physics, and 3 level bosses.</p>
+                    <div class="p-2 rounded mb-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                        <small class="text-warning fw-bold d-block"><i class="fa-solid fa-comment-dots me-1"></i> Mentor Feedback:</small>
+                        <span class="text-white-50" style="font-size: 0.76rem;">"Outstanding collision physics, Toby! Your sprite clone cleaner logic prevented any lag!" &ndash; Miss Sarah</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                    <span class="text-white-50 small"><i class="fa-solid fa-heart text-danger me-1"></i> 28 Likes</span>
+                    <button class="btn-theme-sm" onclick="alert('Opening project in Scratch Web Player...')">
+                        <i class="fa-solid fa-eye me-1"></i> View Game
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="dash-content-box h-100 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-soft-cyan text-cyan fw-bold rounded-pill small">Robotics Rover</span>
+                        <span class="badge-green small">Grade: A</span>
+                    </div>
+                    <h5 class="text-white fw-bold mb-1">Autonomous Maze Rover</h5>
+                    <p class="text-white-50 small mb-3">Spike Prime robot programmed with ultrasonic sensors to navigate cardboard labyrinths without touching walls.</p>
+                    <div class="p-2 rounded mb-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                        <small class="text-warning fw-bold d-block"><i class="fa-solid fa-comment-dots me-1"></i> Mentor Feedback:</small>
+                        <span class="text-white-50" style="font-size: 0.76rem;">"Great use of wheel turn ratios. The breadboard cable management was very clean." &ndash; Mr. David</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                    <span class="text-white-50 small"><i class="fa-solid fa-heart text-danger me-1"></i> 42 Likes</span>
+                    <button class="btn-theme-sm" onclick="alert('Viewing Robot Demo Video...')">
+                        <i class="fa-solid fa-video me-1"></i> Video Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="dash-content-box h-100 d-flex flex-column justify-content-between">
+                <div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-soft-coral text-coral fw-bold rounded-pill small">Python Script</span>
+                        <span class="badge-amber small">In Review</span>
+                    </div>
+                    <h5 class="text-white fw-bold mb-1">Minecraft Pyramid Generator</h5>
+                    <p class="text-white-50 small mb-3">Python loop algorithm that automatically places sandstone blocks in a 30x30 stepped pyramid in 2 seconds.</p>
+                    <div class="p-2 rounded mb-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                        <small class="text-info fw-bold d-block"><i class="fa-solid fa-hourglass-half me-1"></i> Status:</small>
+                        <span class="text-white-50" style="font-size: 0.76rem;">Submitted yesterday. Mentor Alex Mercer is currently grading the code loops.</span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                    <span class="text-white-50 small"><i class="fa-solid fa-code text-warning me-1"></i> Python 3.11</span>
+                    <button class="btn-outline-theme-sm" onclick="alert('Viewing Python Script code...')">
+                        <i class="fa-solid fa-file-code me-1"></i> View Code
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Stackly Kids Academy</title>
+    <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp">
+    
+    <!-- Google Fonts (Fredoka & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="auth-page">
+
+    <div class="container-fluid p-0">
+        <div class="row g-0 min-vh-100">
+            <!-- Left: Playful Learning Banner (Desktop) -->
+            <div class="col-lg-5 d-none d-lg-block auth-banner" style="background-image: url('assets/images/hero_kids_learning.webp');">
+                <div class="auth-banner-content">
+                    <a href="index.html" class="auth-banner-logo d-inline-flex align-items-center text-decoration-none" aria-label="Stackly Kids Academy">
+                        <img src="assets/images/logoStackly.webp" alt="Stackly Kids Academy" height="40" onerror="this.onerror=null; this.src='assets/images/logoStackly.webp';">
+                    </a>
+                    
+                    <div class="text-white my-auto py-5">
+                        <span class="text-uppercase text-warning letter-spacing-2 small fw-bold d-block mb-2">Student &amp; Parent Learning Portal</span>
+                        <h2 class="auth-banner-headline mb-3">Welcome to Stackly Kids Academy</h2>
+                        <p class="auth-banner-desc mb-4">
+                            Spark curiosity and build future-ready superpowers! Interactive live classes in Scratch Coding, Robotics, STEM Science, Game Design &amp; Digital Art for kids aged 4 to 15.
+                        </p>
+                        
+                        <div class="auth-trust-strip">
+                            <span class="auth-trust-badge"><i class="fa-solid fa-shield-halved"></i> 100% KidSAFE &amp; COPPA Compliant</span>
+                            <span class="auth-trust-badge"><i class="fa-solid fa-atom"></i> STEM.org Accredited Curriculum</span>
+                            <span class="auth-trust-badge"><i class="fa-solid fa-star"></i> 4.9/5 Rating from 18,500+ Families</span>
+                        </div>
+                    </div>
+
+                    <div class="text-white-50 small">
+                        &copy; 2026 Stackly Kids Academy. MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008, India.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Kids Academy Authentication Form Side -->
+            <div class="col-12 col-lg-7 auth-form-side">
+                <div class="auth-form-card mx-auto position-relative">
+                    <!-- Back to Home -->
+                    <a href="index.html" class="auth-back-link">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Return to Academy Home</span>
+                    </a>
+
+                    <div class="auth-form-header">
+                        <div class="auth-mobile-logo d-lg-none mx-auto mb-3 text-center">
+                            <a href="index.html">
+                                <img src="assets/images/logoStackly.webp" alt="Stackly Kids Academy" height="34" onerror="this.onerror=null; this.src='assets/images/logoStackly.webp';">
+                            </a>
+                        </div>
+                        <h2 class="auth-form-title">Academy Sign In</h2>
+                        <p class="auth-form-subtitle">Enter your credentials to access your gamified learning portal.</p>
+                    </div>
+
+                    <form id="loginForm">
+                        <!-- Kids Academy Role Selection: Student, Parent, Teacher -->
+                        <div class="mb-4">
+                            <label class="role-section-label">Select Your Role</label>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <input type="radio" name="loginRole" id="loginRoleStudent" value="Student" class="role-card-input" checked required>
+                                    <label for="loginRoleStudent" class="role-card-label w-100">
+                                        <i class="fa-solid fa-user-astronaut"></i>
+                                        <span>Student</span>
+                                    </label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="radio" name="loginRole" id="loginRoleParent" value="Parent" class="role-card-input" required>
+                                    <label for="loginRoleParent" class="role-card-label w-100">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <span>Parent</span>
+                                    </label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="radio" name="loginRole" id="loginRoleTeacher" value="Teacher" class="role-card-input" required>
+                                    <label for="loginRoleTeacher" class="role-card-label w-100">
+                                        <i class="fa-solid fa-chalkboard-user"></i>
+                                        <span>Teacher</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Quick Fill Demo Buttons -->
+                            <div class="d-flex justify-content-between align-items-center mb-3 mt-2 flex-wrap gap-1">
+                                <span class="text-white-50 small" style="font-size: 0.75rem;">1-Click Demo Fill:</span>
+                                <div class="d-flex gap-1 flex-wrap">
+                                    <button type="button" class="btn btn-sm btn-outline-warning py-0 px-2" style="font-size: 0.72rem; border-radius: 6px;" onclick="fillDemo('Student')">Student</button>
+                                    <button type="button" class="btn btn-sm btn-outline-warning py-0 px-2" style="font-size: 0.72rem; border-radius: 6px;" onclick="fillDemo('Parent')">Parent</button>
+                                    <button type="button" class="btn btn-sm btn-outline-warning py-0 px-2" style="font-size: 0.72rem; border-radius: 6px;" onclick="fillDemo('Teacher')">Teacher</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="mb-3 position-relative">
+                            <label class="auth-field-label" for="loginEmail">Email Address</label>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-envelope input-icon"></i>
+                                <input type="email" class="form-control custom-input" id="loginEmail" placeholder="parent@stacklykids.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <label class="auth-field-label mb-0" for="loginPassword">Password</label>
+                                <a href="404.html" class="auth-gold-link small" style="font-size: 0.76rem;">Forgot Password?</a>
+                            </div>
+                            <div class="position-relative">
+                                <i class="fa-solid fa-lock input-icon"></i>
+                                <input type="password" class="form-control custom-input pe-5" id="loginPassword" placeholder="Enter your password" required>
+                                <button type="button" class="toggle-password" aria-label="Toggle password visibility"><i class="fa-regular fa-eye"></i></button>
+                            </div>
+                            
+                            <!-- Real-time Password Strength Meter -->
+                            <div class="password-strength-meter">
+                                <div class="strength-bar flex-fill"></div>
+                                <div class="strength-bar flex-fill"></div>
+                                <div class="strength-bar flex-fill"></div>
+                                <div class="strength-bar flex-fill"></div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-1">
+                                <small class="text-white-50" style="font-size: 0.68rem;">Min 8 chars, 1 uppercase, 1 symbol, 1 num</small>
+                                <small class="strength-text fw-bold text-white-50"></small>
+                            </div>
+                        </div>
+
+                        <!-- Remember Me Checkbox -->
+                        <div class="mb-4 form-check d-flex align-items-center">
+                            <input type="checkbox" class="form-check-input mt-0 me-2" id="rememberMe" required>
+                            <label class="form-check-label" for="rememberMe">Remember this device for safe kid learning</label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-auth-gold">
+                            <span>Sign In to Learning Portal</span>
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </form>
+
+                    <p class="auth-switch-text">
+                        Don't have an Academy account? 
+                        <a href="register.html" class="auth-gold-link ms-1">Create Account Free</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    
+    <!-- Real-time Password Strength Meter JS -->
+    <script>
+        function fillDemo(role) {
+            if(role === 'Student') {
+                const r = document.getElementById('loginRoleStudent'); if (r) r.checked = true;
+                const em = document.getElementById('loginEmail'); if (em) em.value = 'toby.watson@stacklykids.com';
+                const pw = document.getElementById('loginPassword'); if (pw) pw.value = 'KidsCode#2026';
+            } else if(role === 'Parent') {
+                const r = document.getElementById('loginRoleParent'); if (r) r.checked = true;
+                const em = document.getElementById('loginEmail'); if (em) em.value = 'robert.watson@stacklykids.com';
+                const pw = document.getElementById('loginPassword'); if (pw) pw.value = 'KidsCode#2026';
+            } else if(role === 'Teacher') {
+                const r = document.getElementById('loginRoleTeacher'); if (r) r.checked = true;
+                const em = document.getElementById('loginEmail'); if (em) em.value = 'sarah.jenkins@stacklykids.com';
+                const pw = document.getElementById('loginPassword'); if (pw) pw.value = 'KidsCode#2026';
+            }
+            const passInput = document.getElementById('loginPassword');
+            if (passInput) passInput.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const passInput = document.getElementById('loginPassword');
+            const bars = document.querySelectorAll('.strength-bar');
+            const text = document.querySelector('.strength-text');
+            
+            if(passInput && bars.length > 0) {
+                passInput.addEventListener('input', function() {
+                    const val = this.value;
+                    let score = 0;
+                    if(val.length >= 8) score++;
+                    if(/[A-Z]/.test(val)) score++;
+                    if(/[0-9]/.test(val)) score++;
+                    if(/[^A-Za-z0-9]/.test(val)) score++;
+                    
+                    bars.forEach(b => b.className = 'strength-bar flex-fill');
+                    
+                    if(score > 0) bars[0].classList.add('active-weak');
+                    if(score > 1) bars[1].classList.add('active-fair');
+                    if(score > 2) bars[2].classList.add('active-good');
+                    if(score > 3) bars[3].classList.add('active-strong');
+                    
+                    const texts = ["", "Weak", "Fair", "Good", "Strong"];
+                    const colors = ["text-white-50", "text-danger", "text-warning", "text-primary", "text-success"];
+                    
+                    text.textContent = val.length === 0 ? texts[0] : texts[score];
+                    text.className = 'strength-text fw-bold ' + (val.length === 0 ? colors[0] : colors[score]);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

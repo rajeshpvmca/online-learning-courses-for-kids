@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule | Stackly Kids Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-page-body">
+
+    <div class="dash-page-header">
+        <div>
+            <h1 class="dash-page-title">Weekly Class Schedule 🗓️</h1>
+            <p class="dash-page-subtitle">Interactive timetable of Toby's live cohorts, 1-on-1 mentor sessions, and hands-on lab hours.</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+            <button class="btn-amber-sm" onclick="requestMakeUpClass()">
+                <i class="fa-solid fa-clock-rotate-left me-1"></i> Request Make-up Class
+            </button>
+            <button class="btn-primary-sm" onclick="exportCalendar()">
+                <i class="fa-regular fa-calendar-plus me-1"></i> Sync Google Calendar
+            </button>
+        </div>
+    </div>
+
+    <!-- Timezone Banner -->
+    <div class="dash-content-box mb-4 py-3" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(251, 191, 36, 0.1)); border-color: rgba(251, 191, 36, 0.3);">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-3">
+                <div class="stat-icon-wrap amber" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                    <i class="fa-solid fa-earth-asia"></i>
+                </div>
+                <div>
+                    <strong class="text-white">Active Timezone: India Standard Time (IST - UTC+5:30)</strong>
+                    <div class="text-white-50 small">Automatic sync with Salem, TN Centre • 2 Free Make-up session tokens remaining this billing month</div>
+                </div>
+            </div>
+            <span class="badge-amber"><i class="fa-solid fa-bell me-1"></i> SMS Reminders Active</span>
+        </div>
+    </div>
+
+    <!-- Upcoming Live Sessions Table / List -->
+    <div class="dash-content-box mb-4">
+        <div class="box-header">
+            <h5 class="box-title"><i class="fa-solid fa-chalkboard-user"></i> This Week's Live Cohorts (Nov 10 – Nov 16)</h5>
+            <span class="badge-indigo">4 Sessions Scheduled</span>
+        </div>
+
+        <div class="row g-3">
+            <!-- Class Card 1 -->
+            <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-4" style="background: rgba(17, 24, 62, 0.85); border: 1px solid rgba(16, 185, 129, 0.35);">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge-green"><i class="fa-solid fa-circle-dot me-1"></i> TODAY • In 2 Hours</span>
+                        <span class="badge-indigo">Scratch 3.0</span>
+                    </div>
+                    <h5 class="text-white fw-bold mb-1" style="font-family: 'Fredoka', cursive;">Asteroid Blaster: Custom Variables &amp; Lives</h5>
+                    <p class="text-white-50 small mb-2">Module 4 • Session 8 of 12 • Live Coding with Sprite Physics</p>
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top border-secondary border-opacity-25">
+                        <div class="small text-white-50">
+                            <i class="fa-regular fa-clock me-1 text-warning"></i> 5:00 PM – 6:00 PM IST<br>
+                            <i class="fa-solid fa-user-tie me-1 text-info"></i> Mentor: Sarah Jenkins
+                        </div>
+                        <button class="btn-primary-sm" onclick="alert('Launching Live Virtual Classroom (Zoom/WebRTC Bridge)... Toby is connected!')">
+                            <i class="fa-solid fa-video me-1"></i> Enter Classroom
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class Card 2 -->
+            <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-4" style="background: rgba(17, 24, 62, 0.85); border: 1px solid rgba(79, 70, 229, 0.3);">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge-amber"><i class="fa-regular fa-calendar me-1"></i> Wednesday, Nov 12</span>
+                        <span class="badge-indigo">Robotics Lab</span>
+                    </div>
+                    <h5 class="text-white fw-bold mb-1" style="font-family: 'Fredoka', cursive;">LEGO Spike Prime: Ultrasonic Maze Navigator</h5>
+                    <p class="text-white-50 small mb-2">Module 3 • Session 5 of 10 • Distance Sensor Calibration</p>
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top border-secondary border-opacity-25">
+                        <div class="small text-white-50">
+                            <i class="fa-regular fa-clock me-1 text-warning"></i> 4:30 PM – 5:30 PM IST<br>
+                            <i class="fa-solid fa-user-tie me-1 text-info"></i> Mentor: David Sterling
+                        </div>
+                        <button class="btn-amber-sm" onclick="alert('Class kit download: Spike Prime Firmware 2.3 Ready')">
+                            <i class="fa-solid fa-download me-1"></i> Prep Materials
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class Card 3 -->
+            <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-4" style="background: rgba(17, 24, 62, 0.85); border: 1px solid rgba(79, 70, 229, 0.3);">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge-amber"><i class="fa-regular fa-calendar me-1"></i> Friday, Nov 14</span>
+                        <span class="badge-indigo">Python 3</span>
+                    </div>
+                    <h5 class="text-white fw-bold mb-1" style="font-family: 'Fredoka', cursive;">Minecraft Python Pyramids: Loop Automation</h5>
+                    <p class="text-white-50 small mb-2">Module 2 • Session 3 of 10 • Nested For-Loops in 3D Space</p>
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top border-secondary border-opacity-25">
+                        <div class="small text-white-50">
+                            <i class="fa-regular fa-clock me-1 text-warning"></i> 6:00 PM – 7:00 PM IST<br>
+                            <i class="fa-solid fa-user-tie me-1 text-info"></i> Mentor: Sarah Jenkins
+                        </div>
+                        <button class="btn-amber-sm" onclick="alert('Minecraft Education Edition credentials confirmed!')">
+                            <i class="fa-solid fa-cube me-1"></i> Server Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Class Card 4 -->
+            <div class="col-12 col-lg-6">
+                <div class="p-3 rounded-4" style="background: rgba(17, 24, 62, 0.85); border: 1px solid rgba(255, 77, 109, 0.3);">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <span class="badge-coral"><i class="fa-solid fa-star me-1"></i> Saturday, Nov 15</span>
+                        <span class="badge-amber">Weekend Hackathon</span>
+                    </div>
+                    <h5 class="text-white fw-bold mb-1" style="font-family: 'Fredoka', cursive;">Creative Game Jam: Space Explorers Quest</h5>
+                    <p class="text-white-50 small mb-2">Global Collaborative Showcase • Peer Code Review &amp; Badges</p>
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top border-secondary border-opacity-25">
+                        <div class="small text-white-50">
+                            <i class="fa-regular fa-clock me-1 text-warning"></i> 10:30 AM – 12:00 PM IST<br>
+                            <i class="fa-solid fa-location-dot me-1 text-success"></i> Online &amp; Salem Centre
+                        </div>
+                        <span class="badge-green">Registered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offline Lab Centre Notice -->
+    <div class="dash-content-box">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div class="d-flex align-items-center gap-3">
+                <div class="stat-icon-wrap coral" style="width: 48px; height: 48px; font-size: 1.3rem;">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h6 class="text-white fw-bold mb-1">Salem Physical Innovation Hub Available</h6>
+                    <p class="text-white-50 small mb-0">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008 • Parents can drop in for weekend robot hardware workshops with certified tutors.</p>
+                </div>
+            </div>
+            <a href="tel:+919876543210" class="btn-amber-sm text-decoration-none">
+                <i class="fa-solid fa-phone me-1"></i> Contact Salem Hub
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function requestMakeUpClass() {
+            const reason = prompt("Enter the date you wish to reschedule or request a make-up session for Toby (e.g. Wednesday Nov 12):");
+            if (reason) {
+                alert("Thank you! Your make-up session request for " + reason + " has been received. Mentor Sarah Jenkins will confirm your slot within 2 hours.");
+            }
+        }
+        function exportCalendar() {
+            alert("Syncing Toby's schedule with your Google Calendar / Apple iCal (.ics downloaded)...");
+        }
+    </script>
+</body>
+</html>

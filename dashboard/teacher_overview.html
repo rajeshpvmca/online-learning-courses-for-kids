@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Overview | Stackly Kids Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-page-body">
+
+    <div class="dash-page-header">
+        <div>
+            <h1 class="dash-page-title">Mentor Faculty Desk 🧑‍🏫</h1>
+            <p class="dash-page-subtitle">Welcome back, Sarah Jenkins! You have 3 live cohorts scheduled today and 7 project submissions awaiting review.</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+            <button class="btn-amber-sm" onclick="alert('Starting instant 1-on-1 live mentoring room with WebRTC interactive canvas...')">
+                <i class="fa-solid fa-bolt me-1"></i> Quick 1:1 Room
+            </button>
+            <button class="btn-primary-sm" onclick="broadcastNotice()">
+                <i class="fa-solid fa-bullhorn me-1"></i> Send Cohort Broadcast
+            </button>
+        </div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon-wrap indigo"><i class="fa-solid fa-users"></i></div>
+                <div class="stat-value">42</div>
+                <div class="stat-label">Active Learners</div>
+                <div class="stat-trend trend-up"><i class="fa-solid fa-arrow-trend-up"></i> +6 this month</div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon-wrap amber"><i class="fa-solid fa-clock"></i></div>
+                <div class="stat-value">18.5 <span class="fs-6 text-white-50">hrs</span></div>
+                <div class="stat-label">Taught This Week</div>
+                <div class="stat-trend text-white-50">Target: 20 hrs</div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon-wrap coral"><i class="fa-solid fa-clipboard-check"></i></div>
+                <div class="stat-value">7</div>
+                <div class="stat-label">Pending Reviews</div>
+                <div class="stat-trend trend-down" style="color: #FF4D6D;"><i class="fa-solid fa-bell"></i> 3 urgent</div>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div class="stat-card">
+                <div class="stat-icon-wrap mint"><i class="fa-solid fa-star"></i></div>
+                <div class="stat-value">4.98</div>
+                <div class="stat-label">Parent Rating</div>
+                <div class="stat-trend trend-up"><i class="fa-solid fa-award"></i> 124 reviews</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Sessions Today -->
+    <div class="dash-content-box mb-4">
+        <div class="box-header">
+            <h5 class="box-title"><i class="fa-solid fa-video"></i> Today's Live Virtual Classrooms</h5>
+            <span class="badge-green"><i class="fa-solid fa-wifi me-1"></i> Class Server Online</span>
+        </div>
+
+        <div class="table-responsive">
+            <table class="dash-table">
+                <thead>
+                    <tr>
+                        <th>Time (IST)</th>
+                        <th>Cohort Track</th>
+                        <th>Room Code</th>
+                        <th>Students</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong class="text-warning">5:00 PM – 6:00 PM</strong></td>
+                        <td>
+                            <strong class="text-white">Scratch 3.0: Asteroid Blaster Physics</strong>
+                            <div class="text-white-50 small">Cohort Orbit-Alpha • Module 4 Lesson 8</div>
+                        </td>
+                        <td><span class="badge-indigo">ROOM-ORBIT-A</span></td>
+                        <td><strong class="text-white">6 / 6 Enrolled</strong></td>
+                        <td><span class="badge-green">Starts in 2 hrs</span></td>
+                        <td>
+                            <button class="btn-primary-sm" onclick="alert('Launching Orbit-Alpha Teacher Host Console...')">
+                                <i class="fa-solid fa-chalkboard me-1"></i> Open Console
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-warning">6:30 PM – 7:30 PM</strong></td>
+                        <td>
+                            <strong class="text-white">Python 3: Minecraft Pyramids &amp; Automation</strong>
+                            <div class="text-white-50 small">Cohort Py-Bravo • Module 2 Lesson 3</div>
+                        </td>
+                        <td><span class="badge-indigo">ROOM-PY-BRAVO</span></td>
+                        <td><strong class="text-white">5 / 6 Enrolled</strong></td>
+                        <td><span class="badge-amber">Upcoming</span></td>
+                        <td>
+                            <button class="btn-amber-sm" onclick="alert('Pre-loading Minecraft Education Python server...')">
+                                <i class="fa-solid fa-cube me-1"></i> Pre-Launch
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-warning">8:00 PM – 8:30 PM</strong></td>
+                        <td>
+                            <strong class="text-white">1-on-1 Code Clinic: Toby Watson</strong>
+                            <div class="text-white-50 small">Debugging Sprite Collision &amp; Variable Glitches</div>
+                        </td>
+                        <td><span class="badge-coral">1-ON-1 CLINIC</span></td>
+                        <td><strong class="text-white">1 Student</strong></td>
+                        <td><span class="badge-indigo">Scheduled</span></td>
+                        <td>
+                            <button class="btn-amber-sm" onclick="alert('Viewing Toby Watson diagnostic notes & previous project code...')">
+                                <i class="fa-solid fa-notes-medical me-1"></i> View Prep
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Review Queue & Quick Notifications -->
+    <div class="row g-4">
+        <div class="col-12 col-lg-7">
+            <div class="dash-content-box h-100">
+                <div class="box-header mb-3">
+                    <h5 class="box-title"><i class="fa-solid fa-clock-rotate-left"></i> Project Review Submissions</h5>
+                    <a href="teacher_grading.html" class="btn-primary-sm text-decoration-none">View All 7</a>
+                </div>
+
+                <div class="p-3 rounded-3 mb-2" style="background: rgba(11, 15, 42, 0.6); border: 1px solid rgba(79, 70, 229, 0.3);">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <strong class="text-white">Toby Watson • Space Asteroid Blaster V2</strong>
+                        <span class="badge-amber">Scratch 3.0</span>
+                    </div>
+                    <div class="text-white-50 small mb-2">Submitted 3 hours ago • Added custom high-score engine and boss laser physics.</div>
+                    <div class="d-flex justify-content-end gap-2">
+                        <a href="teacher_grading.html" class="btn-amber-sm text-decoration-none">
+                            <i class="fa-solid fa-pen-nib me-1"></i> Grade &amp; Award Star
+                        </a>
+                    </div>
+                </div>
+
+                <div class="p-3 rounded-3 mb-2" style="background: rgba(11, 15, 42, 0.6); border: 1px solid rgba(79, 70, 229, 0.3);">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <strong class="text-white">Kavin R. • Ultrasonic Maze Rover</strong>
+                        <span class="badge-indigo">LEGO Spike Prime</span>
+                    </div>
+                    <div class="text-white-50 small mb-2">Submitted yesterday • Complete distance sensor loop with 90-degree servo turn.</div>
+                    <div class="d-flex justify-content-end gap-2">
+                        <a href="teacher_grading.html" class="btn-amber-sm text-decoration-none">
+                            <i class="fa-solid fa-pen-nib me-1"></i> Review Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+            <div class="dash-content-box h-100">
+                <div class="box-header mb-3">
+                    <h5 class="box-title"><i class="fa-solid fa-bullhorn"></i> Salem Centre Updates</h5>
+                    <span class="badge-coral">Faculty Notice</span>
+                </div>
+                <div class="p-3 rounded-3 mb-3" style="background: rgba(255, 77, 109, 0.08); border: 1px solid rgba(255, 77, 109, 0.25);">
+                    <h6 class="text-white fw-bold mb-1"><i class="fa-solid fa-location-dot text-danger me-1"></i> Salem Weekend Robotics Fair</h6>
+                    <p class="text-white-70 small mb-2">Faculty duty roster for this Saturday at Chinna Thirupathi Centre is now published. 40 young learners registered for the Spike Prime Sumo tournament.</p>
+                    <span class="text-white-50 small">Posted by: Salem Centre Director</span>
+                </div>
+                <div class="p-3 rounded-3" style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.25);">
+                    <h6 class="text-white fw-bold mb-1"><i class="fa-solid fa-trophy text-success me-1"></i> Honorarium Bonus Milestone</h6>
+                    <p class="text-white-70 small mb-0">You have completed 18.5 teaching hours this week with a 98% on-time attendance score. You qualify for the ₹5,000 top mentor incentive!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function broadcastNotice() {
+            const msg = prompt("Enter announcement for your enrolled cohorts (Scratch & Python):");
+            if (msg) {
+                alert("Announcement broadcasted successfully to all 42 students and parents: \"" + msg + "\"");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* ===================================================================
+   STACKLY KIDS ACADEMY - CONTACT US STYLESHEET
+   File: assets/css/contact.css
+   Theme: Online Learning Courses For Kids (Ages 4 - 15)
+   Contains: Specific styles for Contact page without repeating styles.css
+   =================================================================== */
+
+/* Contact Method Cards */
+.contact-hub-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  height: 100%;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.contact-hub-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.contact-hub-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+/* Demo Booking Form Card */
+.booking-form-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 44px 36px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+@media (max-width: 767.98px) {
+  .booking-form-card {
+    padding: 28px 20px;
+  }
+}
+
+/* Map Frame */
+.map-embed-wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  height: 380px;
+  border: 4px solid #FFFFFF;
+}
+
+/* Support Hub Pills */
+.support-city-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+}

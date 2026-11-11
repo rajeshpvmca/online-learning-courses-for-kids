@@ -1,0 +1,105 @@
+/* ===================================================================
+   STACKLY KIDS ACADEMY - TEACHERS & MENTORS STYLESHEET
+   File: assets/css/teachers.css
+   Theme: Online Learning Courses For Kids (Ages 4 - 15)
+   Contains: Specific styles for Teachers page without repeating styles.css
+   =================================================================== */
+
+/* Mentor Card Detailed Styling */
+.mentor-profile-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mentor-profile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(79, 70, 229, 0.3);
+}
+
+.mentor-profile-header {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.mentor-profile-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mentor-exp-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.mentor-profile-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mentor-subject-badge {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* Vetting Funnel Steps */
+.vetting-step-box {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-primary);
+  height: 100%;
+}
+
+.vetting-num-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-indigo-soft);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Comparison Box */
+.format-compare-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  height: 100%;
+}
+
+.format-compare-card.card-highlight {
+  border: 2px solid var(--color-primary);
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Grading | Stackly Kids Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-page-body">
+
+    <div class="dash-page-header">
+        <div>
+            <h1 class="dash-page-title">Project Grading &amp; Rubrics 📝</h1>
+            <p class="dash-page-subtitle">Evaluate hands-on student projects, test live code submissions, provide encouraging feedback, and assign badges.</p>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+            <span class="badge-amber d-flex align-items-center gap-1 px-3 py-2">
+                <i class="fa-solid fa-clock-rotate-left"></i> 3 Submissions Awaiting Evaluation
+            </span>
+        </div>
+    </div>
+
+    <!-- Active Grading Card -->
+    <div class="dash-content-box mb-4" style="border-color: rgba(79, 70, 229, 0.5);">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3 pb-3 border-bottom border-secondary border-opacity-25">
+            <div class="d-flex align-items-center gap-3">
+                <div class="user-avatar" style="background: linear-gradient(135deg, #4F46E5, #6366F1); width: 48px; height: 48px;">TW</div>
+                <div>
+                    <h5 class="text-white fw-bold mb-0" style="font-family: 'Fredoka', cursive;">Toby Watson — Space Asteroid Blaster V2</h5>
+                    <span class="text-white-50 small">Track: Scratch 3.0 Game Dev • Submitted 3 hours ago</span>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn-primary-sm" onclick="alert('Launching interactive Scratch 3.0 embedded simulation player...')">
+                    <i class="fa-solid fa-play me-1"></i> Test Live Game
+                </button>
+                <button class="btn-amber-sm" onclick="alert('Inspecting block code tree: 14 sprites, 28 broadcast events, 0 infinite loops detected.')">
+                    <i class="fa-solid fa-code me-1"></i> Inspect Blocks
+                </button>
+            </div>
+        </div>
+
+        <form id="gradingForm" onsubmit="event.preventDefault(); submitEvaluation();">
+            <div class="row g-4 mb-3">
+                <!-- Rubric Scoring -->
+                <div class="col-12 col-lg-6">
+                    <h6 class="text-warning fw-bold mb-3"><i class="fa-solid fa-sliders me-1"></i> Pedagogical Rubric Score (Total: <span id="totalRubricScore" class="text-white">38</span> / 40)</h6>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small text-white mb-1">
+                            <span>1. Code Architecture &amp; Loops</span>
+                            <span class="fw-bold text-warning" id="score1Val">10 / 10</span>
+                        </div>
+                        <input type="range" class="form-range" min="1" max="10" value="10" id="rubric1" oninput="updateRubricTotal()">
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small text-white mb-1">
+                            <span>2. Sprite Physics &amp; Collision Logic</span>
+                            <span class="fw-bold text-warning" id="score2Val">9 / 10</span>
+                        </div>
+                        <input type="range" class="form-range" min="1" max="10" value="9" id="rubric2" oninput="updateRubricTotal()">
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small text-white mb-1">
+                            <span>3. Sound Design &amp; Visual Creativity</span>
+                            <span class="fw-bold text-warning" id="score3Val">9 / 10</span>
+                        </div>
+                        <input type="range" class="form-range" min="1" max="10" value="9" id="rubric3" oninput="updateRubricTotal()">
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between small text-white mb-1">
+                            <span>4. Bug-Free Execution &amp; Variables</span>
+                            <span class="fw-bold text-warning" id="score4Val">10 / 10</span>
+                        </div>
+                        <input type="range" class="form-range" min="1" max="10" value="10" id="rubric4" oninput="updateRubricTotal()">
+                    </div>
+                </div>
+
+                <!-- Feedback & Badge Award -->
+                <div class="col-12 col-lg-6">
+                    <h6 class="text-warning fw-bold mb-3"><i class="fa-solid fa-comment-dots me-1"></i> Mentor Written Feedback</h6>
+                    
+                    <div class="mb-3">
+                        <textarea class="form-control" id="mentorFeedbackText" rows="4" style="background: rgba(11, 15, 42, 0.8); border: 1px solid rgba(79, 70, 229, 0.35); color: #fff; border-radius: 12px; font-size: 0.9rem;">Spectacular work on the variable collision logic, Toby! The boss asteroid splitting into three micro-asteroids was brilliant coding. For your next challenge, try adding a sound effect loop when the shield power-up activates!</textarea>
+                    </div>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-6">
+                            <label class="form-label small text-white-70">Award Badge</label>
+                            <select class="form-select" id="badgeAwardSelect" style="background: rgba(11, 15, 42, 0.8); border: 1px solid rgba(79, 70, 229, 0.35); color: #fff;">
+                                <option value="Master Debugger 🐞">Master Debugger 🐞</option>
+                                <option value="Galactic Pilot 🚀">Galactic Pilot 🚀</option>
+                                <option value="Loop Champion 🔁">Loop Champion 🔁</option>
+                                <option value="Code Artist 🎨">Code Artist 🎨</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label small text-white-70">Star Gems Reward</label>
+                            <select class="form-select" id="gemsAwardSelect" style="background: rgba(11, 15, 42, 0.8); border: 1px solid rgba(79, 70, 229, 0.35); color: #fff;">
+                                <option value="100">+100 Star Gems ⭐</option>
+                                <option value="150">+150 Star Gems ⭐</option>
+                                <option value="200">+200 Star Gems ⭐</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-amber-sm w-100 justify-content-center py-2 fs-6">
+                        <i class="fa-solid fa-check-double me-1"></i> Approve Grade &amp; Notify Parent
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Recently Graded Submissions -->
+    <div class="dash-content-box">
+        <div class="box-header">
+            <h5 class="box-title"><i class="fa-solid fa-award"></i> Recently Graded Projects</h5>
+            <span class="badge-indigo">24 Projects Graded This Month</span>
+        </div>
+
+        <div class="table-responsive">
+            <table class="dash-table">
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Project Name</th>
+                        <th>Track</th>
+                        <th>Final Grade</th>
+                        <th>Badge Awarded</th>
+                        <th>Graded Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong class="text-white">Kavin R.</strong> (Salem)</td>
+                        <td>Ultrasonic Maze Rover 4x4</td>
+                        <td><span class="badge-coral">LEGO Spike Prime</span></td>
+                        <td><span class="badge-green">98 / 100 (A+)</span></td>
+                        <td><span class="badge-amber">Robotics Ace 🤖</span></td>
+                        <td>Yesterday</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-white">Aarav M.</strong> (Salem)</td>
+                        <td>Automated Minecraft Pyramid Builder</td>
+                        <td><span class="badge-mint">Python 3</span></td>
+                        <td><span class="badge-green">96 / 100 (A)</span></td>
+                        <td><span class="badge-amber">Py-Master 🐍</span></td>
+                        <td>Nov 06, 2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-white">Sophia K.</strong></td>
+                        <td>Interactive Dino Storybook</td>
+                        <td><span class="badge-indigo">Scratch 3.0</span></td>
+                        <td><span class="badge-green">94 / 100 (A)</span></td>
+                        <td><span class="badge-amber">Story Crafter 📖</span></td>
+                        <td>Nov 04, 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function updateRubricTotal() {
+            const r1 = parseInt(document.getElementById('rubric1').value) || 0;
+            const r2 = parseInt(document.getElementById('rubric2').value) || 0;
+            const r3 = parseInt(document.getElementById('rubric3').value) || 0;
+            const r4 = parseInt(document.getElementById('rubric4').value) || 0;
+
+            document.getElementById('score1Val').innerText = r1 + " / 10";
+            document.getElementById('score2Val').innerText = r2 + " / 10";
+            document.getElementById('score3Val').innerText = r3 + " / 10";
+            document.getElementById('score4Val').innerText = r4 + " / 10";
+
+            document.getElementById('totalRubricScore').innerText = (r1 + r2 + r3 + r4);
+        }
+
+        function submitEvaluation() {
+            const badge = document.getElementById('badgeAwardSelect').value;
+            const gems = document.getElementById('gemsAwardSelect').value;
+            const total = document.getElementById('totalRubricScore').innerText;
+
+            alert("✅ Grade (" + total + "/40) submitted successfully for Toby Watson!\n\nAwarded Badge: " + badge + "\nReward: " + gems + "\n\nNotification sent to Robert Watson (Parent)!");
+        }
+    </script>
+</body>
+</html>

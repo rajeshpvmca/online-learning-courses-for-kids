@@ -1,0 +1,84 @@
+/* ===================================================================
+   STACKLY KIDS ACADEMY - COURSES STYLESHEET
+   File: assets/css/courses.css
+   Theme: Online Learning Courses For Kids (Ages 4 - 15)
+   Contains: Specific styles for Courses page without repeating styles.css
+   =================================================================== */
+
+/* Filter Navigation Pills */
+.course-filter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filter-btn-pill {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(15, 23, 42, 0.1);
+  background: #FFFFFF;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-btn-pill:hover,
+.filter-btn-pill.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-glow-indigo);
+  transform: translateY(-2px);
+}
+
+/* Curriculum Progression Matrix */
+.curriculum-milestone-box {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  border-top: 5px solid var(--color-primary);
+  height: 100%;
+}
+
+.curriculum-milestone-box.box-yellow { border-top-color: var(--color-sun-yellow); }
+.curriculum-milestone-box.box-coral { border-top-color: var(--color-coral); }
+.curriculum-milestone-box.box-cyan { border-top-color: var(--color-cyan); }
+.curriculum-milestone-box.box-mint { border-top-color: var(--color-mint); }
+
+/* Download Syllabus Box */
+.syllabus-download-card {
+  background: linear-gradient(135deg, #312E81 0%, #4338CA 50%, #4F46E5 100%);
+  border-radius: var(--radius-xl);
+  padding: 50px 40px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Feature Inclusions Grid */
+.inclusion-pill-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+}
+
+.inclusion-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}

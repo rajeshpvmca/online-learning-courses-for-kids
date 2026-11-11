@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Stackly Kids Academy | Fun Online Learning Courses for Kids (Ages 4-15)</title>
+  <meta name="description" content="Spark curiosity with Stackly Kids Academy. Premier online learning platform for kids: Scratch coding, robotics, STEM science, creative art, and mental math with certified mentors based in Salem, Tamil Nadu.">
+
+  <!-- Favicon: Official Stackly Logo -->
+  <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp">
+
+  <!-- Google Fonts: Fredoka & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6.5.2 CDN (Latest with X / Twitter Icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       GLOBAL PRELOADER
+       =================================================================== -->
+  <div id="global-preloader">
+    <div class="preloader-rocket">
+      <i class="fa-solid fa-rocket"></i>
+    </div>
+    <div class="preloader-brand-title">STACKLY KIDS ACADEMY</div>
+    <div class="preloader-subtitle">Loading Fun Learning Adventure...</div>
+  </div>
+
+  <!-- Common Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <main>
+
+    <!-- ===================================================================
+         SECTION 1: HERO SECTION (WITH THREE.JS 3D CANVAS & GSAP)
+         =================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Three.js 3D Playful Floating Shapes Canvas -->
+      <canvas id="threejs-hero-canvas"></canvas>
+
+      <div class="container position-relative z-2">
+        <div class="row align-items-center g-5">
+          
+          <!-- Hero Text Column -->
+          <div class="col-12 col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+            <div class="hero-kicker-tag">
+              <i class="fa-solid fa-star text-sun-yellow"></i>
+              <span>Rated #1 Kids E-Learning Platform in Tamil Nadu &amp; India</span>
+            </div>
+
+            <h1 class="hero-headline">
+              Where Young Minds Learn to <br>
+              <span class="highlight-indigo">Build, Code &amp; Create!</span>
+            </h1>
+
+            <p class="hero-subtext">
+              Transform passive screen time into superpower learning! Interactive live courses in <strong>Coding, Robotics, STEM Science, Game Design &amp; Digital Art</strong> for kids aged 4 to 15.
+            </p>
+
+            <!-- CTA Action Buttons -->
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+              <a href="404.html" class="btn-hero-primary">
+                <span>Book 2 Free Demo Classes</span>
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+              </a>
+              <a href="404.html" class="btn-hero-secondary">
+                <i class="fa-solid fa-compass me-2"></i>
+                <span>Explore 40+ Courses</span>
+              </a>
+            </div>
+
+            <!-- Trust Pilot & Parent Ratings -->
+            <div class="d-flex align-items-center gap-3 pt-2">
+              <div class="d-flex text-sun-yellow fs-6">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="small text-muted">
+                <strong>4.9/5 Rating</strong> from 18,500+ happy parents in India &amp; worldwide
+              </span>
+            </div>
+          </div>
+
+          <!-- Hero Media Column with Floating Interactive Badges -->
+          <div class="col-12 col-lg-5" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hero-media-wrap">
+              <div class="hero-main-img-card">
+                <img src="assets/images/hero_kids_learning.webp" alt="Kids happily learning with tablet and laptop" class="img-fluid w-100">
+              </div>
+
+              <!-- Floating Badge 1: Top Left -->
+              <div class="hero-badge-float badge-top-left">
+                <div class="badge-icon-circle bg-soft-yellow text-sun-yellow p-2 rounded-circle fs-4">
+                  <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div>
+                  <div class="fw-bold text-dark small">100,000+ Badges Earned</div>
+                  <div class="text-muted" style="font-size: 0.75rem;">Gamified Quests &amp; Points</div>
+                </div>
+              </div>
+
+              <!-- Floating Badge 2: Bottom Right -->
+              <div class="hero-badge-float badge-bottom-right">
+                <div class="badge-icon-circle bg-soft-mint text-mint p-2 rounded-circle fs-4">
+                  <i class="fa-solid fa-shield-cat"></i>
+                </div>
+                <div>
+                  <div class="fw-bold text-dark small">100% KidSafe &amp; Ad-Free</div>
+                  <div class="text-muted" style="font-size: 0.75rem;">Certified Child-Safe Online Space</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 2: TRUSTED PARTNERS & ACCREDITATIONS
+         =================================================================== -->
+    <section class="partners-section py-4">
+      <div class="container">
+        <p class="text-center text-muted small fw-bold text-uppercase mb-3 letter-spacing-1">
+          Accredited Curricula &bull; Trusted by Leading STEM &amp; Child Education Alliances
+        </p>
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
+          <div class="partner-pill">
+            <i class="fa-solid fa-shield-halved text-mint"></i> kidSAFE Seal Certified
+          </div>
+          <div class="partner-pill">
+            <i class="fa-solid fa-atom text-cyan"></i> STEM.org Accredited
+          </div>
+          <div class="partner-pill">
+            <i class="fa-solid fa-graduation-cap text-sun-yellow"></i> Cambridge Assessment Framework
+          </div>
+          <div class="partner-pill">
+            <i class="fa-solid fa-cat text-coral"></i> Scratch Foundation Partner
+          </div>
+          <div class="partner-pill">
+            <i class="fa-solid fa-laptop-code text-purple"></i> UNICEF EdTech Coalition
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 3: AGE-BY-AGE LEARNING PATHWAYS
+         =================================================================== -->
+    <section class="py-5" id="age-groups">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-indigo text-primary-indigo fw-bold rounded-pill px-3 py-2 mb-2">
+            TAILORED CURRICULUM
+          </span>
+          <h2 class="display-6 fw-bold">Built Specifically For Every Growth Stage</h2>
+          <p class="text-muted">Courses designed by child psychologists to match cognitive milestones, fine motor skills, and creative curiosity.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1: Ages 4-6 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="age-group-card age-card-1 h-100">
+              <span class="age-badge bg-soft-yellow text-sun-yellow">AGES 4 &ndash; 6</span>
+              <div class="age-icon-sphere bg-soft-yellow text-sun-yellow">
+                <i class="fa-solid fa-shapes"></i>
+              </div>
+              <h4 class="fw-bold mb-2">Little Explorers</h4>
+              <p class="text-muted small mb-3">Pre-coding puzzles, visual story-building, phonics adventures, and playful spatial math games.</p>
+              <a href="404.html" class="btn btn-sm btn-outline-warning rounded-pill fw-bold px-3">View 8 Courses</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Ages 7-9 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="age-group-card age-card-2 h-100">
+              <span class="age-badge bg-soft-coral text-coral">AGES 7 &ndash; 9</span>
+              <div class="age-icon-sphere bg-soft-coral text-coral">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <h4 class="fw-bold mb-2">Junior Creators</h4>
+              <p class="text-muted small mb-3">Scratch game design, DIY robotics kits, animated digital art, and fun mental arithmetic.</p>
+              <a href="404.html" class="btn btn-sm btn-outline-danger rounded-pill fw-bold px-3">View 12 Courses</a>
+            </div>
+          </div>
+
+          <!-- Card 3: Ages 10-12 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="age-group-card age-card-3 h-100">
+              <span class="age-badge bg-soft-cyan text-cyan">AGES 10 &ndash; 12</span>
+              <div class="age-icon-sphere bg-soft-cyan text-cyan">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h4 class="fw-bold mb-2">Young Innovators</h4>
+              <p class="text-muted small mb-3">Python coding, Roblox Lua script, smart physics experiments, and youth public debate.</p>
+              <a href="404.html" class="btn btn-sm btn-outline-info rounded-pill fw-bold px-3">View 14 Courses</a>
+            </div>
+          </div>
+
+          <!-- Card 4: Ages 13-15 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="age-group-card age-card-4 h-100">
+              <span class="age-badge bg-soft-mint text-mint">AGES 13 &ndash; 15</span>
+              <div class="age-icon-sphere bg-soft-mint text-mint">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h4 class="fw-bold mb-2">Future Leaders</h4>
+              <p class="text-muted small mb-3">Artificial Intelligence, full-stack app prototyping, competitive math, and 3D game engines.</p>
+              <a href="404.html" class="btn btn-sm btn-outline-success rounded-pill fw-bold px-3">View 10 Courses</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 4: FEATURED INTERACTIVE COURSES
+         =================================================================== -->
+    <section class="py-5 bg-white" id="courses">
+      <div class="container py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
+          <div>
+            <span class="badge bg-soft-coral text-coral fw-bold rounded-pill px-3 py-2 mb-2">TOP PICKS</span>
+            <h2 class="display-6 fw-bold mb-0">Most Popular Live Courses</h2>
+          </div>
+          <a href="404.html" class="btn btn-outline-primary rounded-pill fw-bold mt-3 mt-md-0 px-4">
+            Browse All 40+ Courses <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Course 1: Scratch 3.0 Game Coding -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_scratch_coding.webp" alt="Scratch Game Coding for Kids">
+                <span class="course-tag bg-sun-yellow text-dark">BESTSELLER</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.95 (1,420)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-indigo text-primary-indigo rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 7-11 &bull; Beginner</span>
+                <h3 class="course-title">Scratch 3.0: Build 10 Awesome Arcade Games</h3>
+                <p class="text-muted small flex-grow-1">Learn core programming logic, sprites, physics, and gravity while coding full playable arcade games.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-video text-coral me-1"></i> 16 Live Sessions</span>
+                  <span><i class="fa-solid fa-medal text-mint me-1"></i> Certificate</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="course-price-wrap">
+                    <span class="course-price">£89</span>
+                    <span class="text-muted small text-decoration-line-through">£135</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2: AI & Robotics Tinkering Lab -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_robotics_ai.webp" alt="Robotics and AI Tinkering Lab">
+                <span class="course-tag bg-cyan text-white">STEM KIT INCLUDED</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.98 (980)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-cyan text-cyan rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 8-14 &bull; Hands-on</span>
+                <h3 class="course-title">Junior Robotics &amp; AI Explorers</h3>
+                <p class="text-muted small flex-grow-1">Receive a physical hardware kit at your door. Build voice-controlled rovers, obstacle sensors, and smart robots.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-box text-cyan me-1"></i> Free Hardware Kit</span>
+                  <span><i class="fa-solid fa-microchip text-primary-indigo me-1"></i> 1:1 Coaching</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="course-price-wrap">
+                    <span class="course-price">£129</span>
+                    <span class="text-muted small text-decoration-line-through">£180</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: STEM Science Lab -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_stem_science.webp" alt="STEM Science Lab Experiments">
+                <span class="course-tag bg-mint text-white">HANDS-ON LAB</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.92 (840)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-mint text-mint rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 6-12 &bull; Interactive</span>
+                <h3 class="course-title">Mad Science Lab: Kitchen &amp; Physics Magic</h3>
+                <p class="text-muted small flex-grow-1">Explore volcanic eruptions, liquid density towers, crystal growth, and magnetic fields safely with household items.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-flask text-mint me-1"></i> 12 Lab Projects</span>
+                  <span><i class="fa-solid fa-file-pdf text-coral me-1"></i> Printable Logs</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="course-price-wrap">
+                    <span class="course-price">£75</span>
+                    <span class="text-muted small text-decoration-line-through">£110</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4: Creative Digital Art & Animation -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_creative_art.webp" alt="Creative Digital Art & Animation">
+                <span class="course-tag bg-coral text-white">CREATIVE SPARK</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.96 (1,150)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-coral text-coral rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 7-13 &bull; Arts</span>
+                <h3 class="course-title">Digital Art, Character Design &amp; 2D Animation</h3>
+                <p class="text-muted small flex-grow-1">Create cartoon characters, manga drawing, color theory, and produce your very own animated movie short.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-palette text-coral me-1"></i> 14 Art Projects</span>
+                  <span><i class="fa-solid fa-film text-purple me-1"></i> Portfolio Ready</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="course-price-wrap">
+                    <span class="course-price">£85</span>
+                    <span class="text-muted small text-decoration-line-through">£120</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 5: Math Magic & Logic Puzzles -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_math_magic.webp" alt="Math Magic & Logic Puzzles">
+                <span class="course-tag bg-purple text-white">LOGIC BOOST</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.94 (790)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-purple text-purple rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 6-12 &bull; Mathematics</span>
+                <h3 class="course-title">Mental Math Wizards &amp; Vedic Speed Math</h3>
+                <p class="text-muted small flex-grow-1">Solve 3-digit multiplication in seconds without a calculator. Gamified visual geometry and Sudoku puzzles.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-calculator text-purple me-1"></i> Daily Quests</span>
+                  <span><i class="fa-solid fa-crown text-sun-yellow me-1"></i> Olympiad Prep</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="course-price-wrap">
+                    <span class="course-price">£79</span>
+                    <span class="text-muted small text-decoration-line-through">£115</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 6: Public Speaking & Young TED Talkers -->
+          <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="course-card">
+              <div class="course-thumb-wrap">
+                <img src="assets/images/course_public_speaking.webp" alt="Public Speaking and Debate for Kids">
+                <span class="course-tag bg-sun-yellow text-dark">CONFIDENCE</span>
+                <span class="course-rating-badge"><i class="fa-solid fa-star text-sun-yellow me-1"></i> 4.97 (910)</span>
+              </div>
+              <div class="course-content">
+                <span class="badge bg-soft-yellow text-sun-yellow-dark rounded-pill px-3 py-1 mb-2 align-self-start small">Ages 8-15 &bull; Communication</span>
+                <h3 class="course-title">Young TED Talkers: Public Speaking &amp; Debate</h3>
+                <p class="text-muted small flex-grow-1">Overcome stage fear, master voice modulation, storytelling, impromptu speaking, and friendly debates.</p>
+                <div class="course-meta-row">
+                  <span><i class="fa-solid fa-microphone text-coral me-1"></i> 8 Live Speeches</span>
+                  <span><i class="fa-solid fa-users text-cyan me-1"></i> Small Cohort (max 5)</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="course-price-wrap">
+                    <span class="course-price">£95</span>
+                    <span class="text-muted small text-decoration-line-through">£140</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-hero-primary py-2 px-3">Free Trial</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 5: WHY KIDS & PARENTS LOVE US
+         =================================================================== -->
+    <section class="py-5" id="why-us">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-mint text-mint fw-bold rounded-pill px-3 py-2 mb-2">THE STACKLY ADVANTAGE</span>
+          <h2 class="display-6 fw-bold">Why 45,000+ Kids Love Learning Here</h2>
+          <p class="text-muted">We replaced boring memorization with immersive quests, friendly peer collaboration, and immediate accomplishment.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-box">
+              <div class="feature-icon-box bg-soft-indigo text-primary-indigo">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+              <h4 class="fw-bold mb-2">Gamified Learning</h4>
+              <p class="text-muted small mb-0">Kids earn Star Coins, unlock avatar skins, and complete weekly missions while mastering complex concepts.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-box">
+              <div class="feature-icon-box bg-soft-coral text-coral">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <h4 class="fw-bold mb-2">1:1 &amp; Micro Groups</h4>
+              <p class="text-muted small mb-0">Never get lost in a crowded Zoom. Classes have a maximum of 4 students or dedicated 1-on-1 mentorship.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-box">
+              <div class="feature-icon-box bg-soft-cyan text-cyan">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h4 class="fw-bold mb-2">Real Project Portfolios</h4>
+              <p class="text-muted small mb-0">Every student graduates with real publishable video games, robots, websites, or illustrated storybooks.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-box">
+              <div class="feature-icon-box bg-soft-yellow text-sun-yellow-dark">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <h4 class="fw-bold mb-2">Safe &amp; Ad-Free Space</h4>
+              <p class="text-muted small mb-0">100% compliant with global Child Safety, POCSO &amp; COPPA guidelines. Mentors are rigorously vetted and trained.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 6: HOW IT WORKS / 4-STEP ROADMAP
+         =================================================================== -->
+    <section class="py-5 bg-white position-relative" id="how-it-works">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-indigo text-primary-indigo fw-bold rounded-pill px-3 py-2 mb-2">HOW IT WORKS</span>
+          <h2 class="display-6 fw-bold">4 Easy Steps to Your Child's Breakthrough</h2>
+          <p class="text-muted">Getting started takes less than 2 minutes. No credit card required for the free trial!</p>
+        </div>
+
+        <div class="row g-4 pt-4">
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-card">
+              <div class="step-num-pill bg-primary-indigo">1</div>
+              <div class="fs-1 text-primary-indigo mb-3"><i class="fa-solid fa-calendar-check"></i></div>
+              <h4 class="fw-bold mb-2">Book Free Demo</h4>
+              <p class="text-muted small mb-0">Select your child's age, favorite subject, and a convenient weekend or after-school slot.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-card">
+              <div class="step-num-pill bg-coral">2</div>
+              <div class="fs-1 text-coral mb-3"><i class="fa-solid fa-chalkboard"></i></div>
+              <h4 class="fw-bold mb-2">Meet Your Mentor</h4>
+              <p class="text-muted small mb-0">Your child attends an interactive live trial class where they build their very first micro-project.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-card">
+              <div class="step-num-pill bg-cyan">3</div>
+              <div class="fs-1 text-cyan mb-3"><i class="fa-solid fa-chart-line"></i></div>
+              <h4 class="fw-bold mb-2">Custom Pathway</h4>
+              <p class="text-muted small mb-0">Receive a detailed learning assessment report and personalized curriculum roadmap.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="step-card">
+              <div class="step-num-pill bg-mint">4</div>
+              <div class="fs-1 text-mint mb-3"><i class="fa-solid fa-graduation-cap"></i></div>
+              <h4 class="fw-bold mb-2">Earn &amp; Graduate</h4>
+              <p class="text-muted small mb-0">Complete weekly quests, publish real creations, and receive international STEM accreditation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 7: GAMIFIED STUDENT QUEST & REWARDS SHOWCASE
+         =================================================================== -->
+    <section class="py-5" id="quests">
+      <div class="container py-4">
+        <div class="quest-banner-box" data-aos="zoom-in">
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-6">
+              <span class="badge bg-sun-yellow text-dark fw-bold rounded-pill px-3 py-1 mb-3">
+                <i class="fa-solid fa-gem me-1"></i> STAR REWARDS BANK
+              </span>
+              <h2 class="display-6 fw-bold text-white mb-3">Level Up, Earn Badges &amp; Unlock Fun Gear!</h2>
+              <p class="text-white-50 mb-4">
+                Our proprietary gamification engine keeps kids motivated every single day. Children earn Star Gems for homework completion, peer support, and creative problem-solving.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-sun-yellow"></i>
+                  <span class="small text-white">Daily Streak Multipliers</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-sun-yellow"></i>
+                  <span class="small text-white">Real Physical Trophy Kits</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-sun-yellow"></i>
+                  <span class="small text-white">Weekly Global Leaderboard</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="quest-badge-item">
+                    <div class="fs-2 text-sun-yellow mb-2"><i class="fa-solid fa-star"></i></div>
+                    <div class="fw-bold text-white">Pixel Pioneer</div>
+                    <div class="text-white-50 small">Unlocked at Level 5</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="quest-badge-item">
+                    <div class="fs-2 text-coral mb-2"><i class="fa-solid fa-robot"></i></div>
+                    <div class="fw-bold text-white">Bot Commander</div>
+                    <div class="text-white-50 small">Completed 5 Arduino Labs</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="quest-badge-item">
+                    <div class="fs-2 text-cyan mb-2"><i class="fa-solid fa-atom"></i></div>
+                    <div class="fw-bold text-white">Quantum Kid</div>
+                    <div class="text-white-50 small">Science Fair Winner</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="quest-badge-item">
+                    <div class="fs-2 text-mint mb-2"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="fw-bold text-white">Grand Master Coder</div>
+                    <div class="text-white-50 small">Built 10 Live Apps</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 8: LIVE INTERACTIVE CLASSROOM TOUR / VIDEO PREVIEW
+         =================================================================== -->
+    <section class="py-5 bg-white" id="tour">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6" data-aos="fade-right">
+            <span class="badge bg-soft-purple text-purple fw-bold rounded-pill px-3 py-2 mb-2">VIRTUAL CAMPUS</span>
+            <h2 class="display-6 fw-bold mb-3">Peek Inside a Live Stackly Classroom</h2>
+            <p class="text-muted mb-4">
+              Watch how our mentors turn complex logic into delightful bite-sized puzzles. Every session is lively, camera-on, interactive, and filled with smiles and high-fives!
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-center gap-3 mb-2">
+                <i class="fa-solid fa-check-circle text-mint fs-5"></i>
+                <span class="text-dark"><strong>Zero boring lectures:</strong> 80% hands-on building, 20% guided discovery</span>
+              </li>
+              <li class="d-flex align-items-center gap-3 mb-2">
+                <i class="fa-solid fa-check-circle text-mint fs-5"></i>
+                <span class="text-dark"><strong>Interactive whiteboard &amp; code-sharing:</strong> Mentors assist in real-time</span>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-check-circle text-mint fs-5"></i>
+                <span class="text-dark"><strong>Class recordings for review:</strong> Accessible 24/7 in parent portal</span>
+              </li>
+            </ul>
+            <a href="404.html" class="btn btn-hero-primary">Experience It Live Free <i class="fa-solid fa-wand-magic-sparkles ms-2"></i></a>
+          </div>
+
+          <div class="col-12 col-lg-6" data-aos="fade-left">
+            <div class="video-preview-wrap">
+              <img src="assets/images/hero_kid_coding.webp" alt="Kids coding in interactive online classroom" class="w-100">
+              <div class="video-play-btn" onclick="alert('🎬 Loading Interactive Classroom Demo Tour...');">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 9: STAR MENTORS / CERTIFIED INSTRUCTORS
+         =================================================================== -->
+    <section class="py-5" id="mentors">
+      <div class="container py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
+          <div>
+            <span class="badge bg-soft-yellow text-sun-yellow-dark fw-bold rounded-pill px-3 py-2 mb-2">PASSIONATE EDUCATORS</span>
+            <h2 class="display-6 fw-bold mb-0">Meet Our Certified Star Mentors</h2>
+          </div>
+          <a href="404.html" class="btn btn-outline-primary rounded-pill fw-bold mt-3 mt-md-0 px-4">
+            See All Mentors <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Mentor 1 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="mentor-card">
+              <div class="mentor-photo-wrap">
+                <img src="assets/images/teacher_sarah.webp" alt="Sarah Jenkins - Scratch & Python Mentor">
+              </div>
+              <div class="mentor-info-body">
+                <h4 class="fw-bold mb-1">Sarah Jenkins</h4>
+                <div class="text-coral small fw-bold mb-2">Scratch &amp; Python Lead</div>
+                <p class="text-muted small mb-3">Former BBC Micro:bit coach. Specializes in turning video game obsession into coding brilliance.</p>
+                <div class="small text-muted"><i class="fa-solid fa-star text-sun-yellow"></i> 4.98 (450+ students)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentor 2 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="mentor-card">
+              <div class="mentor-photo-wrap">
+                <img src="assets/images/teacher_david.webp" alt="David Sterling - Robotics & STEM Engineer">
+              </div>
+              <div class="mentor-info-body">
+                <h4 class="fw-bold mb-1">David Sterling</h4>
+                <div class="text-cyan small fw-bold mb-2">Robotics &amp; STEM Engineer</div>
+                <p class="text-muted small mb-3">Imperial College robotics grad. Passionate about inspiring the next generation of space engineers.</p>
+                <div class="small text-muted"><i class="fa-solid fa-star text-sun-yellow"></i> 4.96 (380+ students)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentor 3 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="mentor-card">
+              <div class="mentor-photo-wrap">
+                <img src="assets/images/teacher_maya.webp" alt="Maya Rodriguez - Digital Art & Animation">
+              </div>
+              <div class="mentor-info-body">
+                <h4 class="fw-bold mb-1">Maya Rodriguez</h4>
+                <div class="text-purple small fw-bold mb-2">Digital Art &amp; 2D Animation</div>
+                <p class="text-muted small mb-3">Children's book illustrator with 8+ years teaching young artists digital painting &amp; comics.</p>
+                <div class="small text-muted"><i class="fa-solid fa-star text-sun-yellow"></i> 4.99 (520+ students)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mentor 4 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="mentor-card">
+              <div class="mentor-photo-wrap">
+                <img src="assets/images/teacher_priya.webp" alt="Dr. Priya Patel - Math & Logic Magician">
+              </div>
+              <div class="mentor-info-body">
+                <h4 class="fw-bold mb-1">Dr. Priya Patel</h4>
+                <div class="text-mint small fw-bold mb-2">Math &amp; Logic Magician</div>
+                <p class="text-muted small mb-3">Ph.D. in Mathematics Education. Makes algebra feel like solving thrilling detective mysteries.</p>
+                <div class="small text-muted"><i class="fa-solid fa-star text-sun-yellow"></i> 4.97 (600+ students)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 10: PARENT TESTIMONIALS & TRUSTPILOT RATINGS
+         =================================================================== -->
+    <section class="py-5 bg-white" id="testimonials">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-coral text-coral fw-bold rounded-pill px-3 py-2 mb-2">PARENT REVIEWS</span>
+          <h2 class="display-6 fw-bold">Stories from Proud Parents</h2>
+          <p class="text-muted">See how Stackly changed their children's relationship with technology from consumers to builders.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-bubble d-flex flex-column">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted flex-grow-1">
+                "My 8-year-old son Toby used to spend hours mindlessly watching gaming videos. After just 6 weeks with Miss Sarah, he coded his own maze game and showed it off to his entire class! The confidence boost has been phenomenal."
+              </p>
+              <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                <img src="assets/images/parent_emily.webp" alt="Emily Watson" class="rounded-circle" width="48" height="48">
+                <div>
+                  <div class="fw-bold text-dark">Emily Watson</div>
+                  <div class="text-muted small">Mum of Toby (Age 8) &bull; Salem</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-bubble d-flex flex-column">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted flex-grow-1">
+                "The robotics kit arrived in Bristol 2 days after booking. David the instructor was patient, super encouraging, and genuinely treated my daughter like a budding engineer. She now wants to study aerospace at university!"
+              </p>
+              <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                <img src="assets/images/parent_mark.webp" alt="Mark Richardson" class="rounded-circle" width="48" height="48">
+                <div>
+                  <div class="fw-bold text-dark">Mark Richardson</div>
+                  <div class="text-muted small">Dad of Lily (Age 11) &bull; Bristol</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-bubble d-flex flex-column">
+              <div class="testimonial-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-muted flex-grow-1">
+                "As an educator myself, I was impressed by the pedagogy. Concepts like loops, variables, and logic aren't taught with dry slides; everything is wrapped in cheerful game mechanics. Truly world-class e-learning."
+              </p>
+              <div class="d-flex align-items-center gap-3 pt-3 border-top">
+                <img src="assets/images/parent_claire.webp" alt="Claire Higgins" class="rounded-circle" width="48" height="48">
+                <div>
+                  <div class="fw-bold text-dark">Claire Higgins</div>
+                  <div class="text-muted small">Primary School Teacher &amp; Mom &bull; Cambridge</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 11: INTERACTIVE LEARNING STYLE FINDER WIDGET
+         =================================================================== -->
+    <section class="py-5" id="style-finder">
+      <div class="container py-4">
+        <div class="quiz-finder-card" data-aos="fade-up">
+          <div class="row align-items-center g-5">
+            <div class="col-12 col-lg-5">
+              <span class="badge bg-sun-yellow text-dark fw-bold rounded-pill px-3 py-1 mb-2">
+                <i class="fa-solid fa-compass me-1"></i> 30-SECOND TEST
+              </span>
+              <h2 class="display-6 fw-bold mb-3">Discover Your Child's Natural Superpower!</h2>
+              <p class="text-muted mb-4">
+                Not sure where to start? Tell us your child's age and curiosity style, and our curriculum AI will recommend the ideal learning track.
+              </p>
+              <div class="d-flex align-items-center gap-3 text-muted small">
+                <span><i class="fa-solid fa-bolt text-sun-yellow me-1"></i> Instant Result</span>
+                <span><i class="fa-solid fa-gift text-coral me-1"></i> 100% Free</span>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <form id="learningStyleQuizForm" class="p-3">
+                <div class="row g-3 mb-3">
+                  <div class="col-12 col-sm-6">
+                    <label class="form-label fw-bold text-dark" for="quizKidAge">Child's Age:</label>
+                    <select class="form-select rounded-pill py-2 ps-3" id="quizKidAge" required>
+                      <option value="">Select Age</option>
+                      <option value="4-6">Ages 4 &ndash; 6 (Little Explorer)</option>
+                      <option value="7-9">Ages 7 &ndash; 9 (Junior Creator)</option>
+                      <option value="10-12">Ages 10 &ndash; 12 (Young Innovator)</option>
+                      <option value="13-15">Ages 13 &ndash; 15 (Future Leader)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12 col-sm-6">
+                    <label class="form-label fw-bold text-dark" for="quizKidInterest">What excites them most?</label>
+                    <select class="form-select rounded-pill py-2 ps-3" id="quizKidInterest" required>
+                      <option value="">Select Curiosity</option>
+                      <option value="coding">Video Games &amp; Minecraft</option>
+                      <option value="science">Taking apart gadgets &amp; Science</option>
+                      <option value="art">Drawing, Colors &amp; Cartoons</option>
+                      <option value="math">Puzzles, Math &amp; Riddles</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="d-grid mb-3">
+                  <button type="submit" class="btn btn-hero-primary py-3 rounded-pill fw-bold">
+                    Find My Child's Perfect Course <i class="fa-solid fa-sparkles ms-2"></i>
+                  </button>
+                </div>
+
+                <!-- Result Box Container -->
+                <div id="quizResultBox" class="d-none"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 12: UPCOMING FREE LIVE WORKSHOPS
+         =================================================================== -->
+    <section class="py-5 bg-white" id="workshops">
+      <div class="container py-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5" data-aos="fade-up">
+          <div>
+            <span class="badge bg-soft-mint text-mint fw-bold rounded-pill px-3 py-2 mb-2">WEEKEND COMMUNITY</span>
+            <h2 class="display-6 fw-bold mb-0">Upcoming Free Live Workshops</h2>
+          </div>
+          <p class="text-muted mb-0 small">Limited to 15 kids per session &bull; Hands-on 45-minute live fun</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Workshop 1 -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="workshop-card" style="border-left-color: var(--color-coral);">
+              <div>
+                <span class="badge bg-soft-coral text-coral rounded-pill mb-2">Saturday, 11:00 AM GMT</span>
+                <h4 class="fw-bold mb-2">Code Your First Roblox Obby</h4>
+                <p class="text-muted small mb-3">Learn basic Lua coding and build a jumping obstacle course with moving lava blocks.</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <span class="small fw-bold text-mint"><i class="fa-solid fa-ticket me-1"></i> Free Entry</span>
+                <a href="404.html" class="btn btn-sm btn-outline-danger rounded-pill fw-bold">Reserve Seat</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Workshop 2 -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="workshop-card" style="border-left-color: var(--color-cyan);">
+              <div>
+                <span class="badge bg-soft-cyan text-cyan rounded-pill mb-2">Sunday, 3:00 PM GMT</span>
+                <h4 class="fw-bold mb-2">Build a Solar Rover from Home</h4>
+                <p class="text-muted small mb-3">Hands-on physics and mechanics workshop exploring green energy and Mars rover exploration.</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <span class="small fw-bold text-mint"><i class="fa-solid fa-ticket me-1"></i> Free Entry</span>
+                <a href="404.html" class="btn btn-sm btn-outline-info rounded-pill fw-bold">Reserve Seat</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Workshop 3 -->
+          <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="workshop-card" style="border-left-color: var(--color-sun-yellow);">
+              <div>
+                <span class="badge bg-soft-yellow text-sun-yellow-dark rounded-pill mb-2">Next Wednesday, 5:30 PM GMT</span>
+                <h4 class="fw-bold mb-2">Speed Math &amp; Lightning Tricks</h4>
+                <p class="text-muted small mb-3">Shock your friends by multiplying big numbers in your head using ancient Vedic secrets.</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <span class="small fw-bold text-mint"><i class="fa-solid fa-ticket me-1"></i> Free Entry</span>
+                <a href="404.html" class="btn btn-sm btn-outline-warning rounded-pill fw-bold">Reserve Seat</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 13: KID PROJECT GALLERY (WALL OF WONDER)
+         =================================================================== -->
+    <section class="py-5" id="gallery">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-indigo text-primary-indigo fw-bold rounded-pill px-3 py-2 mb-2">WALL OF WONDER</span>
+          <h2 class="display-6 fw-bold">Built by Real Stackly Young Learners</h2>
+          <p class="text-muted">Take a look at what our students create after just a few short weeks of guided mentoring.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Project 1 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-img-box">
+                <img src="assets/images/project_game_build.webp" alt="Space Blaster game project">
+              </div>
+              <div class="p-3">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <span class="badge bg-soft-coral text-coral small">Scratch Game</span>
+                  <span class="small text-muted">By Leo, Age 8</span>
+                </div>
+                <h5 class="fw-bold mb-1">Space Blaster 3000</h5>
+                <p class="text-muted small mb-0">Multi-level retro arcade shooter with boss battles and sound effects.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-img-box">
+                <img src="assets/images/project_space_rover.webp" alt="Mars motorized rover STEM model">
+              </div>
+              <div class="p-3">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <span class="badge bg-soft-cyan text-cyan small">Robotics Model</span>
+                  <span class="small text-muted">By Sophia, Age 10</span>
+                </div>
+                <h5 class="fw-bold mb-1">Mars Sample Collector</h5>
+                <p class="text-muted small mb-0">Motorized dual-wheel rover programmed with ultrasonic obstacle sensors.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card">
+              <div class="project-img-box">
+                <img src="assets/images/project_eco_app.webp" alt="Eco Hero kids mobile app prototype">
+              </div>
+              <div class="p-3">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <span class="badge bg-soft-mint text-mint small">Mobile App</span>
+                  <span class="small text-muted">By Arjun, Age 11</span>
+                </div>
+                <h5 class="fw-bold mb-1">Eco-Hero Recycling Guide</h5>
+                <p class="text-muted small mb-0">Mobile prototype that scans waste items and tells kids which bin to use.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="project-card">
+              <div class="project-img-box">
+                <img src="assets/images/project_animation.webp" alt="Cartoon animation short">
+              </div>
+              <div class="p-3">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <span class="badge bg-soft-purple text-purple small">Digital Animation</span>
+                  <span class="small text-muted">By Mia, Age 7</span>
+                </div>
+                <h5 class="fw-bold mb-1">The Dragon &amp; The Star</h5>
+                <p class="text-muted small mb-0">Original hand-drawn animated short featuring custom cartoon sprites.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 14: PARENT FAQ ACCORDION
+         =================================================================== -->
+    <section class="py-5 bg-white" id="faq">
+      <div class="container py-4 max-w-900">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="badge bg-soft-yellow text-sun-yellow-dark fw-bold rounded-pill px-3 py-2 mb-2">COMMON QUESTIONS</span>
+          <h2 class="display-6 fw-bold">Everything Parents Ask Us</h2>
+          <p class="text-muted">Need more details? We believe in 100% transparency with parents.</p>
+        </div>
+
+        <div class="accordion accordion-kids" id="parentFaqAccordion" data-aos="fade-up">
+          
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHead1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol1" aria-expanded="true" aria-controls="faqCol1">
+                Does my child need previous coding or technical experience?
+              </button>
+            </h3>
+            <div id="faqCol1" class="accordion-collapse collapse show" aria-labelledby="faqHead1" data-bs-parent="#parentFaqAccordion">
+              <div class="accordion-body text-muted">
+                Not at all! Over 80% of our young learners start with zero prior knowledge. Our beginner courses start from simple visual drag-and-drop interfaces like Scratch and block-based robotics where no typing or syntax memorization is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHead2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol2" aria-expanded="false" aria-controls="faqCol2">
+                What hardware or software do we need at home?
+              </button>
+            </h3>
+            <div id="faqCol2" class="accordion-collapse collapse" aria-labelledby="faqHead2" data-bs-parent="#parentFaqAccordion">
+              <div class="accordion-body text-muted">
+                A regular laptop, desktop computer, or iPad/tablet with a working webcam, microphone, and standard web browser (Chrome, Safari, or Edge) is all you need. All software tools used in class are free, cloud-based, and child-safe.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHead3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol3" aria-expanded="false" aria-controls="faqCol3">
+                How do you ensure child safety during live online classes?
+              </button>
+            </h3>
+            <div id="faqCol3" class="accordion-collapse collapse" aria-labelledby="faqHead3" data-bs-parent="#parentFaqAccordion">
+              <div class="accordion-body text-muted">
+                Child safety is our highest priority. All mentors undergo thorough background checks (including police clearance and child safeguarding verification) and child safety training. Class links are password-protected, private, recorded for quality assurance, and strictly monitored. No private student-to-student DMs are permitted.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHead4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol4" aria-expanded="false" aria-controls="faqCol4">
+                What if my child misses a class or wants to reschedule?
+              </button>
+            </h3>
+            <div id="faqCol4" class="accordion-collapse collapse" aria-labelledby="faqHead4" data-bs-parent="#parentFaqAccordion">
+              <div class="accordion-body text-muted">
+                We understand family schedules are busy! You can reschedule any 1-on-1 session up to 4 hours in advance free of charge through the parent portal. All group classes are recorded and include downloadable exercise recaps so your child never falls behind.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHead5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCol5" aria-expanded="false" aria-controls="faqCol5">
+                Is there a money-back guarantee?
+              </button>
+            </h3>
+            <div id="faqCol5" class="accordion-collapse collapse" aria-labelledby="faqHead5" data-bs-parent="#parentFaqAccordion">
+              <div class="accordion-body text-muted">
+                Yes! We offer a 100% no-questions-asked 14-day money-back guarantee on all our course plans. If you or your child don't absolutely love the experience, simply send us a message and we will issue an immediate full refund.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 15: GRAND FREE TRIAL CTA BANNER
+         =================================================================== -->
+    <section class="py-5" id="cta">
+      <div class="container py-4">
+        <div class="grand-cta-banner text-center" data-aos="zoom-in">
+          <span class="badge bg-white text-dark fw-bold rounded-pill px-3 py-2 mb-3">
+            <i class="fa-solid fa-gift text-coral me-1"></i> SPECIAL MARCH PROMOTION
+          </span>
+          <h2 class="display-5 fw-bold text-white mb-3">
+            Give Your Child the Superpower of Creation!
+          </h2>
+          <p class="text-white-50 max-w-700 mx-auto mb-4 fs-5">
+            Claim <strong>2 Free Live 1-on-1 Trial Classes</strong> today. No credit card needed. Watch your child's eyes light up as they build their first real game!
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="404.html" class="btn btn-light text-dark fw-bold rounded-pill px-5 py-3 fs-5 shadow-lg">
+              Book Your Free Demo Now <i class="fa-solid fa-rocket text-coral ms-2"></i>
+            </a>
+            <a href="tel:+919876543210" class="btn btn-outline-white text-white fw-bold rounded-pill px-4 py-3 fs-6">
+              <i class="fa-solid fa-phone-volume me-2"></i> Call: +91 9876543210
+            </a>
+          </div>
+          <div class="small text-white-50 mt-4">
+            <i class="fa-solid fa-shield-halved me-1"></i> No Credit Card Required &bull; 100% Risk Free &bull; Ages 4 to 15
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Common Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- CDN Scripts -->
+  <!-- Bootstrap 5.3.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS (Animate on Scroll) JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Master Script -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

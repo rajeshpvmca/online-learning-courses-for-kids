@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Learning Portal | Stackly Kids Academy</title>
+    <link rel="icon" type="image/webp" href="assets/images/logoStackly.webp">
+
+    <!-- Fonts: Fredoka & Plus Jakarta Sans + Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
+    <!-- Custom CSS (External styles - No inline style block) -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+
+<body class="dash-shell">
+    <!-- Subtle Theme Indigo & Sunny Amber Ambient Backlight -->
+    <div class="position-fixed top-0 start-0 w-100 h-100 pointer-events-none"
+        style="background: radial-gradient(circle at top right, rgba(251, 191, 36, 0.08) 0%, transparent 45%), radial-gradient(circle at bottom left, rgba(79, 70, 229, 0.25) 0%, transparent 45%); z-index: -1;">
+    </div>
+
+    <!-- Sidebar -->
+    <div class="dash-sidebar" id="dashSidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-header-logo d-flex align-items-center justify-content-center text-decoration-none" aria-label="Stackly Kids Academy">
+                <img src="assets/images/logoStackly.webp" alt="Stackly Kids Academy" height="34" onerror="this.onerror=null; this.src='assets/images/logoStackly.webp';">
+            </a>
+        </div>
+        
+        <div class="sidebar-nav"> 
+            
+            <!-- 1. Student Navigation (5 Sub-Pages) -->
+            <div id="navStudent" style="display:none">
+                <p class="nav-section-title">Student Space</p>
+                <a class="nav-item-dash active" data-page="student_overview" href="dashboard/student_overview.html">
+                    <span class="material-symbols-outlined">rocket_launch</span> Overview &amp; Quests
+                </a>
+                <a class="nav-item-dash" data-page="student_courses" href="dashboard/student_courses.html">
+                    <span class="material-symbols-outlined">school</span> My Courses
+                </a>
+                <a class="nav-item-dash" data-page="student_activities" href="dashboard/student_activities.html">
+                    <span class="material-symbols-outlined">sports_esports</span> Quizzes &amp; Games
+                </a>
+                <a class="nav-item-dash" data-page="student_projects" href="dashboard/student_projects.html">
+                    <span class="material-symbols-outlined">palette</span> Project Studio
+                </a>
+                <a class="nav-item-dash" data-page="student_badges" href="dashboard/student_badges.html">
+                    <span class="material-symbols-outlined">military_tech</span> Badges &amp; Gems
+                </a>
+            </div>
+
+            <!-- 2. Parent Navigation (5 Sub-Pages) -->
+            <div id="navParent" style="display:none">
+                <p class="nav-section-title">Parent Guardian Portal</p>
+                <a class="nav-item-dash active" data-page="parent_overview" href="dashboard/parent_overview.html">
+                    <span class="material-symbols-outlined">family_restroom</span> Child Overview
+                </a>
+                <a class="nav-item-dash" data-page="parent_progress" href="dashboard/parent_progress.html">
+                    <span class="material-symbols-outlined">insights</span> Skill Progress
+                </a>
+                <a class="nav-item-dash" data-page="parent_schedule" href="dashboard/parent_schedule.html">
+                    <span class="material-symbols-outlined">calendar_month</span> Class Schedule
+                </a>
+                <a class="nav-item-dash" data-page="parent_billing" href="dashboard/parent_billing.html">
+                    <span class="material-symbols-outlined">receipt_long</span> Plans &amp; Billing
+                </a>
+                <a class="nav-item-dash" data-page="parent_messages" href="dashboard/parent_messages.html">
+                    <span class="material-symbols-outlined">forum</span> Mentor Messages
+                </a>
+            </div>
+
+            <!-- 3. Teacher Navigation (5 Sub-Pages) -->
+            <div id="navTeacher" style="display:none">
+                <p class="nav-section-title">Faculty &amp; Mentor Desk</p>
+                <a class="nav-item-dash active" data-page="teacher_overview" href="dashboard/teacher_overview.html">
+                    <span class="material-symbols-outlined">co_present</span> Mentor Overview
+                </a>
+                <a class="nav-item-dash" data-page="teacher_students" href="dashboard/teacher_students.html">
+                    <span class="material-symbols-outlined">group</span> Student Roster
+                </a>
+                <a class="nav-item-dash" data-page="teacher_classes" href="dashboard/teacher_classes.html">
+                    <span class="material-symbols-outlined">video_camera_front</span> Live Classrooms
+                </a>
+                <a class="nav-item-dash" data-page="teacher_grading" href="dashboard/teacher_grading.html">
+                    <span class="material-symbols-outlined">fact_check</span> Project Grading
+                </a>
+                <a class="nav-item-dash" data-page="teacher_earnings" href="dashboard/teacher_earnings.html">
+                    <span class="material-symbols-outlined">payments</span> Hours &amp; Honorarium
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Main Content & Header -->
+    <div class="dash-main">
+        <header class="dash-header">
+            <div class="d-flex align-items-center gap-2 gap-md-3"> 
+                <button class="btn p-2 d-flex align-items-center justify-content-center d-lg-none"
+                    id="sidebarToggle" style="border-radius: 8px; background: #11183e; border: 1px solid rgba(79, 70, 229, 0.35); color: var(--dash-secondary);" aria-label="Toggle Navigation Menu"> 
+                    <span class="material-symbols-outlined">menu</span> 
+                </button>
+                <div class="d-flex flex-column">
+                    <h5 class="dash-portal-title">Stackly Kids Academy</h5> 
+                    <span class="role-badge-gold mt-1" id="roleBadge">LEARNING PORTAL</span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-2 gap-md-4">
+                <div class="text-end d-none d-md-block">
+                    <div class="fw-bold text-white small" id="navUserName">Student / Parent</div>
+                    <div class="text-white-50" style="font-size: 0.76rem;" id="navUserEmail">student@stacklykids.com</div>
+                </div>
+                <div class="d-flex align-items-center gap-2 gap-md-3 border-start border-secondary border-opacity-25 ps-2 ps-md-3">
+                    <div class="user-avatar" id="userAvatar">S</div> 
+                    <button class="btn-dash-signout" id="signoutBtn"> 
+                        <span class="material-symbols-outlined" style="font-size: 1.1rem;">logout</span> 
+                        <span class="d-none d-sm-inline">Sign Out</span>
+                    </button>
+                </div>
+            </div>
+        </header> 
+        
+        <!-- Dashboard Content Iframe --> 
+        <iframe id="dashFrame" src="about:blank" title="Kids Academy Portal Content" scrolling="yes"></iframe>
+    </div>
+    
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>
